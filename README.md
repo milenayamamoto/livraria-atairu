@@ -6,11 +6,11 @@
 
 ---
 
+* Irailda Fernandes
 * Milena Yamamoto
 * Paola Brito
 * Regiane Machado
 * Renan Martins
 * Valter Rodriguez
-* Irailda Fernandes
 
 ---
