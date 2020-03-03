@@ -7,12 +7,12 @@
   <section class="glide glide_main">
     <div class="glide__track glide__track__main" data-glide-el="track">
       <ul class="glide__slides glide__slides__main">
-        <li class="glide__slide"><img src="img/slider1.png" alt="" /></li>
-        <li class="glide__slide"><img src="img/slider2.png" alt="" /></li>
-        <li class="glide__slide"><img src="img/slider3.png" alt="" /></li>
-        <li class="glide__slide"><img src="img/slider4.png" alt="" /></li>
-        <li class="glide__slide"><img src="img/slider5.png" alt="" /></li>
-        <li class="glide__slide"><img src="img/slider6.png" alt="" /></li>
+        <li class="glide__slide"><img src="../img/slider1.png" alt="" /></li>
+        <li class="glide__slide"><img src="../img/slider2.png" alt="" /></li>
+        <li class="glide__slide"><img src="../img/slider3.png" alt="" /></li>
+        <li class="glide__slide"><img src="../img/slider4.png" alt="" /></li>
+        <li class="glide__slide"><img src="../img/slider5.png" alt="" /></li>
+        <li class="glide__slide"><img src="../img/slider6.png" alt="" /></li>
       </ul>
     </div>
 

@@ -9,7 +9,7 @@
       <div class="row justify-content-center">
         <div class="col-8 col-sm-6 col-lg-6">
           <div class="form-group">
-            <img src="img/users-cog-solid.svg" alt="logotipo usuário">
+            <img src="../img/users-cog-solid.svg" alt="logotipo usuário">
           </div>
         </div>
         <div class="col-8 col-sm-6 col-lg-6">
@@ -22,7 +22,7 @@
       <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-lg-6">
           <div class="form-group">
-            <img src="img/box-open-solid.svg" alt="logotipo de uma caixa aberta">
+            <img src="../img/box-open-solid.svg" alt="logotipo de uma caixa aberta">
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-6">

@@ -8,7 +8,7 @@
 
       <div class="col col-7 mt-5 mr-md-3">
 
-        <img src="img/livro_placeholder.png" class='img-fluid rounded mx-auto d-block' alt="imagem do livro">
+        <img src="../img/livro_placeholder.png" class='img-fluid rounded mx-auto d-block' alt="imagem do livro">
       </div>
 
       <div class="col col-4 mt-5" text-align="start">

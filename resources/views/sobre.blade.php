@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<section>
-					<img src="img/about.jpeg" class="img-fluid" alt="">
+					<img src="../img/about.jpeg" class="img-fluid" alt="">
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto autem ea minus
 						quaerat
 						nostrum nisi doloremque non doloribus sequi iste illum, similique ipsa alias ipsum rem
