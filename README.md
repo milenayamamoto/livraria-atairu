@@ -2,7 +2,7 @@
 
 
 ## Livraria Ataîru - E-commerce
-![Livraria Ataîru](/img/LivrariaAtaîru-logo-Courier_New.png "Livraria Ataîru")
+![Livraria Ataîru](img/LivrariaAtairu-logo-Courier_New.png "Livraria Ataîru")
 
 ---
 
