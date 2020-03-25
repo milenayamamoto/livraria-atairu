@@ -14,7 +14,8 @@ class Carrinho_produto extends Model
 
 	protected $fillable = [
 		'id_cliente',
-		'id_produto'
+		'id_produto',
+		'quantidade'
 	];
 
 	public function produto()

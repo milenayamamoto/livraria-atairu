@@ -18,6 +18,7 @@ class CarrinhoProduto extends Migration
 			$table->foreign('id_cliente')->references('id_cliente')->on('carrinho');
 			$table->unsignedInteger('id_produto');
 			$table->foreign('id_produto')->references('id_produto')->on('produto');
+			$table->integer('quantidade');
 			$table->timestamps();
 		});
 	}
