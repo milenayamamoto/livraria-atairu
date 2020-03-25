@@ -3,8 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Cliente extends Model
+class Cliente extends Authenticatable
 {
 	protected $table = "cliente";
 	protected $dates = [
@@ -20,6 +23,14 @@ class Cliente extends Model
 		'senha',
 		'id_endereco'
 	];
+
+	protected $hidden = [
+		'senha', 'remember_token',
+];
+
+protected $casts = [
+	'email_verified_at' => 'datetime',
+];
 
 	public function endereco()
 	{

@@ -42,7 +42,7 @@
     background-color: #507642;
     border: 2px solid rgba(134,148,42,0.8);
 }
-Medias-queries
+/* Medias-queries */
 
 @media (max-width: 576px) {
     .forma  .cadastro-input, .forma #main-cadastro .cadastro-senha {

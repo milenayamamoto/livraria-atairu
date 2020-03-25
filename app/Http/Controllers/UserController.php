@@ -7,11 +7,13 @@ use App\User;
 
 class UserController extends Controller
 {
-   public function index(){
-       return view('alterarConta');
-   }
+    public function index()
+    {
+        return view('alterarConta');
+    }
 
-   public function update(Request $request){
+    public function update(Request $request)
+    {
         $id = auth()->user()->id;
 
         $usuario = User::find($id);
@@ -20,30 +22,31 @@ class UserController extends Controller
         $usuario->password = bcrypt($request->input('password'));
         $update = $usuario->save();
 
-        if($update){
+        if ($update) {
             return redirect()
-                    ->route('home')
-                    ->with('success', 'Dados atualizados com sucesso');
-        }else{
+                ->route('home')
+                ->with('success', 'Dados atualizados com sucesso');
+        } else {
             return redirect()
-                    ->back()
-                    ->with('error', 'Não foi possível alterar os dados. Por favor, tente novamente');
+                ->back()
+                ->with('error', 'Não foi possível alterar os dados. Por favor, tente novamente');
         }
-   }
+    }
 
-   public function delete(){
+    public function delete()
+    {
         $id = auth()->user()->id;
 
         $usuario = User::find($id);
         $delete = $usuario->delete();
-        if($delete){
+        if ($delete) {
             return redirect()
-                    ->route('register')
-                    ->with('success', 'Usuário excluído com sucesso');
-        }else{
+                ->route('register')
+                ->with('success', 'Usuário excluído com sucesso');
+        } else {
             return redirect()
-                    ->back()
-                    ->with('error', 'Não excluir o usuário. Por favor, tente novamente');
+                ->back()
+                ->with('error', 'Não excluir o usuário. Por favor, tente novamente');
         }
     }
 }
