@@ -30,10 +30,9 @@ Route::any('/auth/register', 'HomeController@index');
 
 //CRUD Carrinho
 //TODO: Adicionar item ao carrinho na tela do produto($id) (C)
-Route::get('/carrinho/{id}', 'CarrinhoController@index'); //TODO: Pegar o id do cliente na rota
-Route::get('/carrinho', 'CarrinhoController@update'); //TODO: Ver carrinho (U)
-Route::get('/carrinho', 'CarrinhoController@delete'); //TODO: Ver carrinho (D)
-
+Route::get('/carrinho/{id_cliente}', 'CarrinhoController@index'); //*READ: Pega todos os produtos do carrinho (R)
+Route::patch('/carrinho/update/{id_carrinho}/{id_produto}', 'CarrinhoController@update'); //* UPDATE: Quantidade do produto (U)
+Route::delete('/carrinho/delete/{id_carrinho}/{id_produto}', 'CarrinhoController@remove')->name('carrinho_delete'); //* DELETE: Produto no carrinho (D)
 
 //CRUD Pedidos
 Route::get('/carrinho', 'PedidoController@checkout'); //TODO: Fechando o carrinho (C)
@@ -55,4 +54,3 @@ Route::post('/admin/produto/excluir/{id}', 'ProdutoController@remove');
 
 //Autenticação
 Auth::routes();
-

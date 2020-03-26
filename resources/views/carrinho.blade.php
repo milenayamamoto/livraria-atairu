@@ -27,13 +27,20 @@
           </div>
           <div class="product-price" style="color:#507642">{{ $produto->preco }}</div>
           <div class="product-quantity">
-            <input type="number" value={{ $produto->quantidade }} min="1">
-            <span>Remover</span>
-          </div>
-          <div class="product-removal">
-            <button class="remove-product">
-              <i class="fas fa-sync"></i>
-            </button>
+            <form action="/carrinho/update/{{ $produto->id_carrinho }}/{{ $produto->id_produto }}" enctype="multipart/form-data" method="POST">
+              @csrf
+              @method('PATCH')
+              <input type="number" id='quantidade' name="quantidade" value={{ $produto->quantidade }} min="1">
+              <button class="remove-product">
+                <i class="fas fa-sync"></i>
+              </button>
+            </form>
+
+            <form action="/carrinho/delete/{{ $produto->id_carrinho }}/{{ $produto->id_produto }}" enctype="multipart/form-data" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-link">Remover</button>
+            </form>
           </div>
           <div class="product-line-price" style="color:#507642;">{{ number_format((((float)str_replace( ['.',','], ['','.'], $produto->preco )*1.0) * $produto->quantidade), 2, '.', '') }}</div>
         </div>
@@ -43,7 +50,7 @@
         <div class="totals">
           <div class="totals-item totals-item-total">
             <label>Valor Total</label>
-            <div class="totals-value" id="cart-total">32,99</div>
+            <div class="totals-value" id="cart-total">[TBD]</div>
           </div>
         </div>
 
