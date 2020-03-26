@@ -27,7 +27,7 @@
           <a href="/admin/produto/{{$produto->id_produto}}">{{$produto->nome}}</a>
         </td>
         <td>
-          {{($produto->id_categoria)}}
+          <a href="/admin/produto/{{$produto->id_produto}}">{{$produto->categoria->nome_categoria}}</a>
         </td>
         <td>
           <a href="/admin/produto/{{ $produto->id_produto }}" class="btn btn-secondary">editar</a>

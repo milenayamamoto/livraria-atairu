@@ -100,7 +100,7 @@ class ProdutoController extends Controller
             $caminhoRelativo = "/storage/$nomePasta/$nomeArquivo";
             // movendo
             $arquivo->move($caminhoAbsoluto, $nomeArquivo);
-            $produto->imagem = $caminhoRelativo;
+            $produto->produto_imagem->nome = $caminhoRelativo;
         }
 
         $produto->save();

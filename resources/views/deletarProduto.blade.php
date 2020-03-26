@@ -29,10 +29,10 @@
                     <input readonly disabled type="text" name="ano_publicacao" id="ano_publicacao" class="form-control" value="{{$produto->ano_publicacao}}">
                 </div>
                 <div class="form-group">
-                    <input readonly disabled type="edicao" name="edicao" id="edicao" class="form-control" value="{{$produto->edicao}}">
+                    <input readonly disabled type="text" name="edicao" id="edicao" class="form-control" value="{{$produto->edicao}}">
                 </div>
                 <div class="form-group">
-                    <input readonly disabled type="editora" name="editora" id="editora" class="form-control" value="{{$produto->editora}}">
+                    <input readonly disabled type="text" name="editora" id="editora" class="form-control" value="{{$produto->editora}}">
                 </div>
                 <div class="form-group">
                     <input readonly disabled type="text" name="preco" id="preco" class="form-control" value="{{$produto->preco}}">

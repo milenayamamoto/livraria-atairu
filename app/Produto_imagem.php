@@ -18,4 +18,10 @@ class Produto_imagem extends Model
 		'id_produto'
 
 	];
+
+	public function produto()
+	{
+		return $this->belongsTo('App\Produto');
+	}
+
 }

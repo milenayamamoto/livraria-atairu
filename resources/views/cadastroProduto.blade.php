@@ -33,11 +33,11 @@
     </div>
     <div class="form-group">
         <label for="edicao">Edição</label>
-        <input type="edicao" name="edicao" id="edicao" class="form-control">
+        <input type="text" name="edicao" id="edicao" class="form-control">
     </div>
     <div class="form-group">
         <label for="editora">Editora</label>
-        <input type="editora" name="editora" id="editora" class="form-control">
+        <input type="text" name="editora" id="editora" class="form-control">
     </div>
     <div class="form-group">
       <label for="preco">Preço</label>
@@ -50,8 +50,8 @@
             <option disabled selected>Selecione uma opção</option>
             @if(isset($categorias))
             @foreach($categorias as $categoria)
-            <option value="{{ $categoria->id_categoria }}"{{($categoria->id_categoria == $produto->id_categoria) ? 'selected' : ''}}>
-            {{ $categoria->nome_categoria }}
+            <option value="{{ $categoria->id_categoria }}">
+              {{ $categoria->nome_categoria }}
             </option>
             @endforeach
             @endif

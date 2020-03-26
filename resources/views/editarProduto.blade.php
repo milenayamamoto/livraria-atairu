@@ -12,8 +12,8 @@
       <input type="text" name="nome" id="nome" class="form-control" value="{{$produto->nome}}">
     </div>
     <div class="form-group">
-        <label for="sinopse">Sinopse</label>
-        <textarea name="sinopse" id="sinopse" class="form-control" value="{{$produto->sinopse}}"></textarea>
+      <label for="sinopse">Sinopse</label>
+      <textarea name="sinopse" id="sinopse" class="form-control" rows=5>{{$produto->sinopse}}</textarea>
     </div>
     <div class="form-group">
         <label for="autor">Autor</label>
@@ -33,11 +33,11 @@
     </div>
     <div class="form-group">
         <label for="edicao">Edição</label>
-        <input type="edicao" name="edicao" id="edicao" class="form-control" value="{{$produto->edicao}}">
+        <input type="text" name="edicao" id="edicao" class="form-control" value="{{$produto->edicao}}">
     </div>
     <div class="form-group">
         <label for="editora">Editora</label>
-        <input type="editora" name="editora" id="editora" class="form-control" value="{{$produto->editora}}">
+        <input type="text" name="editora" id="editora" class="form-control" value="{{$produto->editora}}">
     </div>
     <div class="form-group">
       <label for="preco">Preço</label>
@@ -50,8 +50,8 @@
             <option disabled selected>Selecione uma opção</option>
             @if(isset($categorias))
             @foreach($categorias as $categoria)
-            <option value="{{ $categoria->id_categoria }}">
-            {{ $categoria->nome_categoria }}
+            <option value="{{ $categoria->id_categoria }}"{{($categoria->id_categoria == $produto->id_categoria) ? 'selected' : ''}}>
+              {{ $categoria->nome_categoria }}
             </option>
             @endforeach
             @endif
