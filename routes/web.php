@@ -30,7 +30,7 @@ Route::any('/auth/register', 'HomeController@index');
 
 //CRUD Carrinho
 //TODO: Adicionar item ao carrinho na tela do produto($id) (C)
-Route::get('/carrinho/{id}', 'CarrinhoController@index'); //TODO: Ver carrinho (R)
+Route::get('/carrinho/{id}', 'CarrinhoController@index'); //TODO: Pegar o id do cliente na rota
 Route::get('/carrinho', 'CarrinhoController@update'); //TODO: Ver carrinho (U)
 Route::get('/carrinho', 'CarrinhoController@delete'); //TODO: Ver carrinho (D)
 
