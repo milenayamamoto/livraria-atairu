@@ -29,4 +29,14 @@ class HomeController extends Controller
 	{
 		return view('contato');
 	}
+
+	public function carrinho()
+	{
+		return view('carrinho');
+	}
+
+	public function cadastro()
+	{
+		return view('cadastro');
+	}
 }

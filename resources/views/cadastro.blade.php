@@ -5,8 +5,9 @@
 <div class="container">
 	<main>
 		<section>
+		<h1 id="main-cadastro">Cadastro de Cliente</h1>
 			<div class="forma">
-				<h1 id="main-cadastro">Cadastro de Cliente</h1>
+				
 				<form method="POST" action="/cadastro">
 					<p> <label>Nome:</label> </p>
 					<input type="text" name="nome" id="nome"><br>

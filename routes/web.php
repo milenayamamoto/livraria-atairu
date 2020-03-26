@@ -44,7 +44,15 @@ Route::get('/conta/pedidos', 'PedidoController@delete'); //TODO: Meus pedidos (D
 //CRUD Produtos
 Route::get('/produtos', 'ProdutoController@index');
 Route::get('/produto/{id}', 'ProdutoController@show');
+Route::get('/admin/produto/', 'ProdutoController@admin');
+Route::get('/admin/produto/create', 'ProdutoController@create');
+Route::post('/admin/produto/insert', 'ProdutoController@insert');
+Route::get('/admin/produto/{id}', 'ProdutoController@update');
+Route::post('/admin/produto/{id}', 'ProdutoController@put');
+Route::get('/admin/produto/excluir/{id}', 'ProdutoController@delete');
+Route::post('/admin/produto/excluir/{id}', 'ProdutoController@remove');
 
 
 //Autenticação
 Auth::routes();
+
