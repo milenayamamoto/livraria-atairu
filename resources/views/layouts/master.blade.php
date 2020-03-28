@@ -51,9 +51,9 @@
                             <!-- Authentication Links -->
                             @guest
                             <div id="texto_cadastro">
-                                <a class="nav-link mt-2" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 @if (Route::has('register'))
-                                <a class="nav-link p-0" href="{{ route('register') }}">{{ __('Cadastre-se') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastre-se') }}</a>
                             </div>
                             @endif
                             @else
@@ -64,7 +64,7 @@
                                 <a class="dropdown-item" href="{{ route('conta.index') }}">
                                     {{ __('Minha conta') }}
                                 </a>
-                                <a class="dropdown-item" href="{{ route('pedido.index') }}">
+                                <a class="dropdown-item" href="#">
                                     {{ __('Meus pedidos') }}
                                 </a>
 

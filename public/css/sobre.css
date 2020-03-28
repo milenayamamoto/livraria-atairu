@@ -1,7 +1,4 @@
-h1 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
+.conteudo-texto {
+    color: #507642;
+    text-align: justify;
 }

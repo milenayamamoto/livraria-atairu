@@ -2,50 +2,21 @@
 
 @section('content')
 
-<div class="container">
-	<!-- <main> -->
-	<div class="row">
-		<div class="col">
-			<br>
-			<br>
-			<h1>Quem somos</h1>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<section>
-					<img src="../img/about.jpeg" class="img-fluid" alt="">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto autem ea minus
-						quaerat
-						nostrum nisi doloremque non doloribus sequi iste illum, similique ipsa alias ipsum rem
-						perferendis
-						atque amet.
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, repellendus
-						necessitatibus!
-						Blanditiis maxime tempore sunt natus et incidunt quae, quas aperiam ab facilis. Excepturi
-						recusandae, in dolor voluptatibus quis consequuntur.
-					</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto autem ea minus
-						quaerat
-						nostrum nisi doloremque non doloribus sequi iste illum, similique ipsa alias ipsum rem
-						perferendis
-						atque amet.
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae neque odio maxime
-						voluptas
-						ullam ipsam dolores quis cumque voluptatum, quas alias perspiciatis commodi aut omnis autem,
-						molestias aliquam veniam earum.
-					</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto autem ea minus
-						quaerat
-						nostrum nisi doloremque non doloribus sequi iste illum, similique ipsa alias ipsum rem
-						perferendis
-						atque amet.</p>
-				</section>
-			</div>
-		</div>
-	</div>
+<main>  
+    <section id="quem-somos">
+        <div class="container container-sobre">
+            <div class="row">
+                <div class="col-md-6 p-5">
+                    <h1 class="text-center mb-4">Quem Somos</h1>
+                    <p class="conteudo-texto">Lorem Ipsum é simplesmente um texto fictício da indústria tipográfica e de impressão. Lorem Ipsum é o texto fictício padrão do setor desde os anos 1500, quando uma impressora desconhecida pegou uma galera do tipo e a mexeu para fazer um livro de espécimes. Ele sobreviveu não apenas cinco séculos, mas também o salto para a composição eletrônica, permanecendo essencialmente inalterado. Foi popularizado na década de 1960 com o lançamento de folhas de Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.</p>
+                </div>
 
-	<!-- </main> -->
-</div>
-
+                <div class="col-md-6 pt-5">
+                    <img  src="../img/1undraw_book_lover_mkck.svg" width="100%" height="450">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 @stop

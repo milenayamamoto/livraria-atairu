@@ -1,116 +1,123 @@
-#main-cadastro{
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #86942A;
+#main-cadastro {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #86942a;
 }
 
 .cadastro-label {
-  color: #A37B45;
-  font-family: "Courier";
-  font-size: 16px;
+    color: #a37b45;
+    font-family: "Courier";
+    font-size: 16px;
 }
 
-.forma{
-  width: 35vw;
-  height: 70vh;
-  padding: 70px 9px;
-  margin: 40px auto;
-  box-sizing: border-box;
-  border: 2px solid rgba(134,148,42,0.8);
-  border-radius: 5px; 
+.forma {
+    width: 35vw;
+    height: 70vh;
+    padding: 70px 9px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    border: 2px solid rgba(134, 148, 42, 0.8);
+    border-radius: 5px;
 }
 
-.forma  .cadastro-input, .forma .cadastro-senha {
-  background-color: #F3F4EC;
-  border: 1px solid #CCCFBC;
+.forma .cadastro-input,
+.forma .cadastro-senha {
+    background-color: #f3f4ec;
+    border: 1px solid #cccfbc;
 }
 
-.forma .cadastro-input:focus, .forma .cadastro-senha:focus{
-  background-color: rgba(163,123,69,0.3);
-  box-shadow: 0px 0px 5px 0px #A37B45;
+.forma .cadastro-input:focus,
+.forma .cadastro-senha:focus {
+    background-color: rgba(163, 123, 69, 0.3);
+    box-shadow: 0px 0px 5px 0px #a37b45;
 }
 
-.forma .botao-cadastro{
-  background-color: #86942A;
-  color: #F3F4EC;
-  font-family: "Courier";
-  border: 2px solid #507642;
+.forma .botao-cadastro {
+    background-color: #86942a;
+    color: #f3f4ec;
+    font-family: "Courier";
+    border: 2px solid #507642;
 }
 
-.forma .botao-cadastro:hover{
-  background-color: #507642;
-  border: 2px solid rgba(134,148,42,0.8);
+.forma .botao-cadastro:hover {
+    background-color: #507642;
+    border: 2px solid rgba(134, 148, 42, 0.8);
 }
 /* Medias-queries */
 
 @media (max-width: 576px) {
-  .forma  .cadastro-input, .forma #main-cadastro .cadastro-senha {
-      font-size: 12px;
-  }
+    .forma .cadastro-input,
+    .forma #main-cadastro .cadastro-senha {
+        font-size: 12px;
+    }
 
-  .forma{
-      width: 35vw;
-      height: 70vh;
-      padding: 70px 9px;
-      margin: 40px auto;
-      box-sizing: border-box;
-      border: 2px solid red;
-      border-radius: 5px; 
-  }
+    .forma {
+        width: 35vw;
+        height: 70vh;
+        padding: 70px 9px;
+        margin: 40px auto;
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 5px;
+    }
 }
 
-@media (min-width: 576px) {  
-  .container{
-      padding: .0rem !important;
-      margin: .0rem !important;
-  }
-  .forma{
-      width: 88vw;
-      height: 50vh;
-      padding: 36px 80px;
-      margin: 40px auto;
-  }
+@media (min-width: 576px) {
+    .container-cadastro {
+        /* padding: .0rem;
+      margin: .0rem; */
+    }
+    .forma {
+        width: 88vw;
+        height: 50vh;
+        padding: 36px 80px;
+        margin: 40px auto;
+    }
 
-  .forma  .cadastro-input, .forma #main-cadastro .cadastro-senha {
-      font-size: 16px;
-  }
+    .forma .cadastro-input,
+    .forma #main-cadastro .cadastro-senha {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 768px) {
-  .forma  .cadastro-input, .forma #main-cadastro .cadastro-senha {
-      font-size: 12px;
-  }
+    .forma .cadastro-input,
+    .forma #main-cadastro .cadastro-senha {
+        font-size: 12px;
+    }
 
-  .forma{
-      width: 60vw;
-      height: 55vh;
-      padding: 76px 35px;
-      margin: 40px auto;
-  }
+    .forma {
+        width: 60vw;
+        height: 55vh;
+        padding: 76px 35px;
+        margin: 40px auto;
+    }
 }
 
 @media (min-width: 992px) {
-  .forma{
-      width: 40vw;
-      height: 65vh;
-      padding: 76px 35px;
-      margin: 40px auto;
-  }
+    .forma {
+        width: 40vw;
+        height: 65vh;
+        padding: 76px 35px;
+        margin: 40px auto;
+    }
 
-  .forma  .cadastro-input, .forma #main-cadastro .cadastro-senha {
-      font-size: 20px;
-  }
+    .forma .cadastro-input,
+    .forma #main-cadastro .cadastro-senha {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
-  .forma{
-      width: 40vw;
-      height: 65vh;
-      padding: 76px 73px;
-      margin: 40px auto;
-  }
+    .forma {
+        /* width: 40vw; */
+        /* height: 65vh; */
+        /* padding: 76px 73px; */
+        margin: 40px auto;
+    }
 
-  .forma  .cadastro-input, .forma #main-cadastro .cadastro-senha {
-      font-size: 22px;
-  }
+    .forma .cadastro-input,
+    .forma #main-cadastro .cadastro-senha {
+        font-size: 22px;
+    }
 }

@@ -27,7 +27,7 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-6">
           <h2 class="title-conta-2  titulo-conta-2">Alterar Conta</h2>
-          <p class="paraf-conta"><a href="/alterarconta">Modificar senha e Informações pessoais</a></p>
+          <p class="paraf-conta"><a href="{{route ('conta.alteraConta')}}">Modificar senha e Informações pessoais</a></p>
         </div>
       </div>
     </div>

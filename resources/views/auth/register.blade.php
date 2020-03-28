@@ -3,9 +3,9 @@
 @section('content')
 <main>
     <section>
+    <h1 id="main-cadastro">{{ __('Cadastro de Cliente') }}</h1>
         <div class="forma">
-            <h1 id="main-cadastro">{{ __('Cadastro de Cliente') }}</h1>
-            <div class="container p-1 m-5">
+            <div class="container-cadastro p-1 m-5">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="form-group row">  
@@ -53,7 +53,7 @@
                         </div> 
                     </div>
                     </div>
-                    <div class="container mt-5">
+                    <div class="container-cadastro mt-5">
                         <div class="row">
                             <div class="col text-center">
                                 <button type="submit" class="btn botao-cadastro" id="cadastrar" name="cadastrar">
@@ -61,7 +61,7 @@
                                 </button> 
                             </div>
                         </div>
-                    </div>
+                 </div>
         </div>  
     </section>
 </main>
