@@ -29,6 +29,10 @@ class HomeController extends Controller
 	{
 		return view('contato');
 	}
+	public function sobre()
+	{
+		return view('sobre');
+	}
 
 	public function carrinho()
 	{

@@ -37,7 +37,7 @@
                             <div class="glide glide__track glideMultiplos glide_destaques">
                                 <div class="glide__track glide__track__multiplo" data-glide-el="track">
                                     <ul class="glide__slides">
-                                        <h1>LISTAR LIVROS AQUI</h1>
+                                        <h1>Livro</h1>
                                     </ul>
                                 </div>
 
@@ -54,7 +54,7 @@
                             <div class="glide glideMultiplos glide_ofertas">
                                 <div class="glide__track glide__track__multiplo" data-glide-el="track">
                                     <ul class="glide__slides">
-                                        <h1>LISTAR LIVROS OFERTAS</h1>
+                                        <h1>Livro</h1>
                                     </ul>
                                 </div>
 
