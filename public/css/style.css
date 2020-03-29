@@ -5,6 +5,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    background-color: #f8f8f8;
 }
 
 h1 {
@@ -97,9 +98,12 @@ h1 {
 
 .navbar,
 .navbar .dropdown-menu,
-.navbar-dark .navbar-nav .nav-link {
-    background-color: #86942a;
-    color: #fff;
+.navbar .dropdown-item,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .show > .nav-link {
+    background-color: white;
+    font-weight: 800;
+    color: black;
 }
 
 .navbar ul li {
@@ -116,11 +120,7 @@ h1 {
 .navbar ul li:hover,
 .navbar .dropdown-menu a:hover,
 .navbar-dark .navbar-nav .nav-link:hover {
-    background-color: #507642;
-}
-
-.navbar a {
-    color: #fff;
+    color: #507642;
 }
 
 .navbar-dark .navbar-toggler,
@@ -130,6 +130,7 @@ h1 {
 }
 
 .navbar-dark #navbarNavDropdown {
+    border-bottom: 1px solid black;
     padding-left: 10px;
 }
 

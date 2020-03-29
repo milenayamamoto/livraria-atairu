@@ -1,82 +1,59 @@
 @extends('layouts.master')
+@include('home_carousel')
 
 @section('content')
 
-                    <main>
-                        <!-- Primeiro carousel -->
-                        <section class="glide glide_main">
-                            <div class="glide__track glide__track__main" data-glide-el="track">
-                                <ul class="glide__slides glide__slides__main">
-                                    <li class="glide__slide"><img src="../img/slider1.png" alt="" /></li>
-                                    <li class="glide__slide"><img src="../img/slider2.png" alt="" /></li>
-                                    <li class="glide__slide"><img src="../img/slider3.png" alt="" /></li>
-                                    <li class="glide__slide"><img src="../img/slider4.png" alt="" /></li>
-                                    <li class="glide__slide"><img src="../img/slider5.png" alt="" /></li>
-                                    <li class="glide__slide"><img src="../img/slider6.png" alt="" /></li>
-                                </ul>
-                            </div>
+<main id='home'>
 
-                            <div class="glide__arrows" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-angle-left"></i></button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-angle-right"></i></button>
-                            </div>
+	@yield('home_carousel')
 
-                            <div class="glide__bullets" data-glide-el="controls[nav]">
-                                <button class="glide__bullet" data-glide-dir="=0"></button>
-                                <button class="glide__bullet" data-glide-dir="=1"></button>
-                                <button class="glide__bullet" data-glide-dir="=2"></button>
-                                <button class="glide__bullet" data-glide-dir="=3"></button>
-                                <button class="glide__bullet" data-glide-dir="=4"></button>
-                                <button class="glide__bullet" data-glide-dir="=5"></button>
-                            </div>
-                        </section>
+	<section id='section-editoras'>
+		<h2>BUSCA POR EDITORAS</h2>
+		<div class="row py-5 editoras">
+			<div class="col-lg-3">
+				<!-- Item -->
+				<figure class="caption-3 mb-0 shadow-sm p-3">
+					<img src="../img/alta-books-bg.jpg" alt="" class="w-100 editora-imagem">
+					<figcaption class="px-3 py-3 bg-white shadow-sm">
+						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/Alta-Books.jpg"></h2>
+					</figcaption>
+				</figure>
 
-                        <!-- Seção de destaques -->
-                        <section id="destaques">
-                            <h2>Destaques</h2>
-                            <div class="glide glide__track glideMultiplos glide_destaques">
-                                <div class="glide__track glide__track__multiplo" data-glide-el="track">
-                                    <ul class="glide__slides">
-                                        <h1>Livro</h1>
-                                    </ul>
-                                </div>
+			</div>
 
-                                <div class="glide__arrows" data-glide-el="controls">
-                                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-angle-left"></i></button>
-                                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-angle-right"></i></button>
-                                </div>
-                            </div>
-                        </section>
+			<div class="col-lg-3">
+				<!-- Item -->
+				<figure class="caption-3 mb-0 shadow-sm p-3">
+					<img src="../img/rocco-bg.png" alt="" class="w-100 editora-imagem">
+					<figcaption class="px-3 py-3 bg-white shadow-sm">
+						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/rocco.jpg"></h2>
+					</figcaption>
+				</figure>
 
-                        <!-- Seção de ofertas -->
-                        <section id="ofertas">
-                            <h2>Ofertas</h2>
-                            <div class="glide glideMultiplos glide_ofertas">
-                                <div class="glide__track glide__track__multiplo" data-glide-el="track">
-                                    <ul class="glide__slides">
-                                        <h1>Livro</h1>
-                                    </ul>
-                                </div>
+			</div>
+			<div class="col-lg-3">
+				<!-- Item -->
+				<figure class="caption-3 mb-0 shadow-sm p-3">
+					<img src="../img/companhia-das-letras-bg.png" alt="" class="w-100 editora-imagem">
+					<figcaption class="px-3 py-3 bg-white shadow-sm">
+						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/companhia-das-letras.jpg"></h2>
+					</figcaption>
+				</figure>
 
-                                <div class="glide__arrows" data-glide-el="controls">
-                                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-angle-left"></i></button>
-                                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-angle-right"></i></button>
-                                </div>
-                            </div>
-                        </section>
+			</div>
+	</section>
 
-                        <!-- Formulário de newsletter -->
-                        <section class="newsletter">
-                            <p class="m-0">Assine nossa newsletter: </p>
-                            <form>
-                                <input type="email" name="newsletter" placeholder="Digite seu email">
-                                <button>Enviar</button>
-                            </form>
-                        </section>
+	<!-- Formulário de newsletter -->
+	<section class="newsletter">
+		<p class="m-0 text-right">Cadastre seu e-mail e ganhe um cupom para sua primeira compra: </p>
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="email@email.com.br" aria-label="Digite seu email" aria-describedby="button-addon2">
+			<div class="input-group-append">
+				<button class="btn btn-light" type="button" id="button-addon2"><i class="fas fa-chevron-right"></i></button>
+			</div>
+		</div>
+	</section>
 
-                    </main>
+</main>
 
-
-                    <?php $show_glide = TRUE; ?>        
-                
 @stop
