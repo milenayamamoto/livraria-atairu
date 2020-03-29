@@ -57,3 +57,4 @@ Route::get('/admin/produto/{id}', 'ProdutoController@update');
 Route::post('/admin/produto/{id}', 'ProdutoController@put');
 Route::get('/admin/produto/excluir/{id}', 'ProdutoController@delete');
 Route::post('/admin/produto/excluir/{id}', 'ProdutoController@remove');
+Route::get('/produtos/categoria/{id}', 'ProdutoController@filtroCategoria');
