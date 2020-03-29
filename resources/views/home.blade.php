@@ -24,7 +24,7 @@
 			<div class="col-lg-3">
 				<!-- Item -->
 				<figure class="caption-3 mb-0 shadow-sm p-3">
-					<img src="../img/rocco-bg.png" alt="" class="w-100 editora-imagem">
+					<img src="../img/rocco-bg.jpg" alt="" class="w-100 editora-imagem">
 					<figcaption class="px-3 py-3 bg-white shadow-sm">
 						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/rocco.jpg"></h2>
 					</figcaption>
@@ -34,7 +34,7 @@
 			<div class="col-lg-3">
 				<!-- Item -->
 				<figure class="caption-3 mb-0 shadow-sm p-3">
-					<img src="../img/companhia-das-letras-bg.png" alt="" class="w-100 editora-imagem">
+					<img src="../img/companhia-das-letras-bg.jpg" alt="" class="w-100 editora-imagem">
 					<figcaption class="px-3 py-3 bg-white shadow-sm">
 						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/companhia-das-letras.jpg"></h2>
 					</figcaption>
