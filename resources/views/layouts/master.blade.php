@@ -99,10 +99,10 @@
 							<i class="fas fa-bars"></i> Categorias
 						</a>
 						<div class="dropdown-menu m-0" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="/produtos">Autoajuda</a>
 							<a class="dropdown-item" href="/produtos">Biografia</a>
-							<a class="dropdown-item" href="/produtos">Filosofia</a>
-							<a class="dropdown-item" href="/produtos">Romance</a>
+							<a class="dropdown-item" href="/produtos">Informática</a>
+							<a class="dropdown-item" href="/produtos">Literatura Estrangeira</a>
+							<a class="dropdown-item" href="/produtos">Literatura Nacional</a>
 						</div>
 					</li>
 					<li class="nav-item">
