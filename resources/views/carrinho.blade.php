@@ -27,7 +27,7 @@
           </div>
           <div class="product-price" style="color:#507642">{{ $produto->preco }}</div>
           <div class="product-quantity">
-            <form action="/carrinho/update/{{ $produto->id_carrinho }}/{{ $produto->id_produto }}" enctype="multipart/form-data" method="POST">
+            <form action="/carrinho/update/{{ $produto->id_cliente }}/{{ $produto->id_produto }}" enctype="multipart/form-data" method="POST">
               @csrf
               @method('PATCH')
               <input type="number" id='quantidade' name="quantidade" value={{ $produto->quantidade }} min="1">
@@ -36,7 +36,7 @@
               </button>
             </form>
 
-            <form action="/carrinho/delete/{{ $produto->id_carrinho }}/{{ $produto->id_produto }}" enctype="multipart/form-data" method="POST">
+            <form action="/carrinho/delete/{{ $produto->id_cliente }}/{{ $produto->id_produto }}" enctype="multipart/form-data" method="POST">
               @csrf
               @method('DELETE')
               <button type="submit" class="btn btn-link">Remover</button>

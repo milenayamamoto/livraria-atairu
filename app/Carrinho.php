@@ -13,11 +13,20 @@ class Carrinho extends Model
 	];
 
 	protected $fillable = [
-		'id_cliente'
+		'id_cliente',
+		'id_produto',
+		'nome',
+		'quantidade',
+		'preco'
 	];
 
 	public function cliente()
 	{
 		return $this->hasOne('App\Cliente');
+	}
+
+	public function produto()
+	{
+		return $this->hasMany('App\Produto');
 	}
 }

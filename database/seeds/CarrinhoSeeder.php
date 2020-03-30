@@ -26,13 +26,11 @@ class CarrinhoSeeder extends Seeder
 		//Criando um carrinho novo
 		$novoCarrinho = new Carrinho();
 		$novoCarrinho->id_cliente = DB::table('cliente')->where('nome_completo', 'Jao das Neves')->value('id_cliente');
+		$novoCarrinho->id_produto = DB::table('produto')->where('isbn', '9788520927823')->value('id_produto');
+		$novoCarrinho->produto_nome = DB::table('produto')->where('isbn', '9788520927823')->value('nome');
+		$novoCarrinho->quantidade = '1';
+		$novoCarrinho->preco = DB::table('produto')->where('isbn', '9788520927823')->value('preco');
 		$novoCarrinho->save();
 
-		//Colocando produtos nesse carrinho
-		$novoCarrinho = new Carrinho_produto();
-		$novoCarrinho->id_carrinho =  1;
-		$novoCarrinho->id_produto = DB::table('produto')->where('isbn', '9788520927823')->value('id_produto');
-		$novoCarrinho->quantidade = '1';
-		$novoCarrinho->save();
 	}
 }

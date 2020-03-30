@@ -56,7 +56,7 @@
         <span class="post">{{ $novidade->autor }}</span>
         <h4>R$ {{ $novidade->preco }}</h4>
       </div>
-      <a href='vizprod.php'><button class='btn btn-outline-dark'>Ver mais</button></a>
+      <a href="/produto/{{ $novidade->id_produto }}"><button class='btn btn-outline-dark'>Ver mais</button></a>
     </div>
     @endforeach
   </div>

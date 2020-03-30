@@ -11,48 +11,48 @@ use Illuminate\Http\File;
 
 class ProdutoController extends Controller
 {
-	public function index()
-	{
-		$produtos = Produto::paginate(9);
+    public function index()
+    {
+        $produtos = Produto::paginate(9);
         $categorias = Produto_categoria::all();
         return view('produtos', compact('produtos', 'categorias'));
-	}
+    }
 
-	public function show($id_produto)
-	{
-        $produto =  Produto::find($id_produto);
-		$categoria = Produto_categoria::find($id_produto);
-		return view('produto', compact('produto', 'categoria'));
-	}
-
-	public function admin()
+    public function show($id_produto)
     {
-		$produto = Produto::all();
-		$categoria = Produto_categoria::all();
-        return view('admin', compact('produto', 'categoria'));
-	}
+        $produto =  Produto::find($id_produto);
+        $categoria = Produto_categoria::find($id_produto);
+        return view('produto', compact('produto', 'categoria'));
+    }
 
-	public function create()
+    public function admin()
+    {
+        $produto = Produto::all();
+        $categoria = Produto_categoria::all();
+        return view('admin', compact('produto', 'categoria'));
+    }
+
+    public function create()
     {
         $categorias = Produto_categoria::all();
 
         return view('cadastroProduto', compact('categorias'));
-	}
-	
-	
-	public function insert(Request $request)
+    }
+
+
+    public function insert(Request $request)
     {
 
-		$produto = new Produto();
+        $produto = new Produto();
 
         $produto->nome = $request->nome;
-		$produto->sinopse = $request->sinopse;
-		$produto->autor = $request->autor;
-		$produto->isbn = $request->isbn;
-		$produto->numero_paginas = $request->numero_paginas;
-		$produto->ano_publicacao = $request->ano_publicacao;
-		$produto->edicao = $request->edicao;
-		$produto->editora = $request->editora;
+        $produto->sinopse = $request->sinopse;
+        $produto->autor = $request->autor;
+        $produto->isbn = $request->isbn;
+        $produto->numero_paginas = $request->numero_paginas;
+        $produto->ano_publicacao = $request->ano_publicacao;
+        $produto->edicao = $request->edicao;
+        $produto->editora = $request->editora;
         $produto->preco = $request->preco;
         $produto->id_categoria = $request->categoria;
 
@@ -73,27 +73,27 @@ class ProdutoController extends Controller
 
         return redirect('/admin/produto');
     }
-    
+
     public function update($id_produto)
     {
         $produto = Produto::find($id_produto);
         $categorias = Produto_categoria::all();
-        
+
         return view('editarProduto', compact('produto', 'categorias'));
     }
-    
+
     public function put(Request $request, $id_produto)
     {
         $produto = Produto::find($id_produto);
 
         $produto->nome = $request->nome;
-		$produto->sinopse = $request->sinopse;
-		$produto->autor = $request->autor;
-		$produto->isbn = $request->isbn;
-		$produto->numero_paginas = $request->numero_paginas;
-		$produto->ano_publicacao = $request->ano_publicacao;
-		$produto->edicao = $request->edicao;
-		$produto->editora = $request->editora;
+        $produto->sinopse = $request->sinopse;
+        $produto->autor = $request->autor;
+        $produto->isbn = $request->isbn;
+        $produto->numero_paginas = $request->numero_paginas;
+        $produto->ano_publicacao = $request->ano_publicacao;
+        $produto->edicao = $request->edicao;
+        $produto->editora = $request->editora;
         $produto->preco = $request->preco;
         $produto->id_categoria = $request->categoria;
 
@@ -127,8 +127,8 @@ class ProdutoController extends Controller
         $produto = Produto::find($id_produto);
 
         $image_path = $produto->imagem;
-        
-        if(Storage::exists($image_path)) {
+
+        if (Storage::exists($image_path)) {
             Storage::delete($image_path);
         }
 
@@ -145,5 +145,4 @@ class ProdutoController extends Controller
 
         return view('produtos', compact('produtos', 'nomeCategoria'));
     }
-
 }
