@@ -32,6 +32,32 @@
                             @enderror
                         </div>
                     </div>
+                    <div class="form-group row"> 
+                        <label class="cadastro-label" for="login-cpf">{{ __('Digite seu  CPF:') }}</label> 
+                        <div class="col-md-10">
+                            <input id="cpf" type="text" class="form-control cadastro-input @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}" required autocomplete="cpf">
+
+                            @error('cpf')
+
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+                     <div class="form-group row"> 
+                        <label class="cadastro-label" for="login-telefone">{{ __('Digite seu  Telefone:') }}</label> 
+                        <div class="col-md-10">
+                            <input id="telefone" type="number" class="form-control cadastro-input @error('telefone') is-invalid @enderror" name="telefone" value="{{ old('telefone') }}" required autocomplete="telefone">
+
+                            @error('telefone')
+
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
                     <div class="form-group row">                    
                         <label class="cadastro-label" for="password" >{{ __('Digite sua Senha') }}</label>
                         <div class="col-md-10">

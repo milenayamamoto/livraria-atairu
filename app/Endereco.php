@@ -18,6 +18,12 @@ class Endereco extends Model
 		'complemento',
 		'cidade',
 		'uf',
-		'cep'
+		'cep',
+                'id_usuario'
 	];
+        
+            public function user()
+	{
+		 return $this->belongsTo('App\User');
+	}
 }

@@ -15,7 +15,7 @@ class Carrinho extends Migration
 	{
 		Schema::create('carrinho', function (Blueprint $table) {
 			$table->unsignedInteger('id_cliente');
-			$table->foreign('id_cliente')->references('id_cliente')->on('cliente');
+			$table->foreign('id_cliente')->references('id')->on('users');
 			$table->unsignedInteger('id_produto');
 			$table->foreign('id_produto')->references('id_produto')->on('produto');
 			$table->string('produto_nome');

@@ -19,9 +19,11 @@ class Endereco extends Migration
 			$table->string('numero');
 			$table->string('complemento')->nullable();
 			$table->string('cidade');
-			$table->string('uf', 2);
+			$table->string('uf',100);
 			$table->integer('cep');
 			$table->timestamps();
+                        $table->unsignedInteger('id_usuario');
+                        $table->foreign('id_usuario')->references('id')->on('users');
 		});
 	}
 

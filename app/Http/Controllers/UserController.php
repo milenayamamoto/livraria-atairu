@@ -24,6 +24,8 @@ class UserController extends Controller
         $usuario = User::find($id);
         $usuario->name = $request->input('nome');
         $usuario->email = $request->input('email');
+        $usuario->cpf = $request->input('cpf');
+        $usuario->telefone = $request->input('telefone');
         $usuario->password = bcrypt($request->input('password'));
         $update = $usuario->save();
 
