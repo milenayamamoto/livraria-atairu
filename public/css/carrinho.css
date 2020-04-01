@@ -148,7 +148,7 @@ label {
     width: 40px;
     color: #507642;
 }
-#carrinho-container .product .remove-product {
+#carrinho-container .product .update-product {
     border: 0;
     padding: 4px 8px;
     background-color: #507642;
@@ -157,7 +157,7 @@ label {
     font-size: 12px;
     border-radius: 3px;
 }
-#carrinho-container .product .remove-product:hover {
+#carrinho-container .product .update-product:hover {
     background-color: red;
 }
 

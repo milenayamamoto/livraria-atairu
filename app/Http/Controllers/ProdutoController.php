@@ -22,6 +22,7 @@ class ProdutoController extends Controller
     {
         $produto =  Produto::find($id_produto);
         $categoria = Produto_categoria::find($id_produto);
+
         return view('produto', compact('produto', 'categoria'));
     }
 

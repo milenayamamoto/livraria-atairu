@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Carrinho_produto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\User;
 use App\Produto;
+use App\Carrinho;
 
 class CarrinhoController extends Controller
 {
@@ -17,21 +16,39 @@ class CarrinhoController extends Controller
 	}
 
 	// Carrinho: Read produtos (R)
-	public function index($id_cliente)
+	public function index()
 	{
-		$resultado = DB::table('carrinho')
-			->join('produto', 'carrinho.id_produto', '=', 'produto.id_produto')
-			->select('carrinho.id_cliente', 'carrinho.id_produto AS id_produto', 'produto.imagem', 'carrinho.produto_nome AS titulo', 'carrinho.quantidade', 'carrinho.preco')
-			->get();
+		$id_user = auth()->user()->id;
+		if ($id_user) {
+			$resultado = DB::table('carrinho')
+				->join('produto', 'carrinho.id_produto', '=', 'produto.id_produto')
+				->where('carrinho.id_cliente', '=', $id_user)
+				->select('carrinho.id_cliente', 'carrinho.id_produto AS id_produto', 'produto.imagem', 'carrinho.produto_nome AS titulo', 'carrinho.quantidade', 'carrinho.preco')
+				->get();
 
-		return view('carrinho', compact('resultado'));
+			return view('carrinho', compact('resultado'));
+		} else {
+			return redirect()
+				->back()
+				->with('error', 'Não foi possível acessar seu carrinho. Por favor, tente novamente');
+		}
 	}
 
 	//Carrinho: Add produto (C)
 	public function insert($id_produto)
 	{
-		$userID = auth()->user()->id;
-		$product = Produto::find($id_produto);
+		$id_user = auth()->user()->id;
+		$produto = Produto::find($id_produto);
+
+		$carrinho = new Carrinho();
+		$carrinho->id_cliente = $id_user;
+		$carrinho->id_produto = $produto->id_produto;
+		$carrinho->produto_nome = $produto->nome;
+		$carrinho->quantidade = '1';
+		$carrinho->preco = $produto->preco;
+		$carrinho->save();
+
+		return redirect('/carrinho');
 	}
 
 	// Carrinho: Update quantidade (U)

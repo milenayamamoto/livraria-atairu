@@ -33,8 +33,8 @@ Route::any('/finalizaCadastro', 'EnderecoController@index')->name('cliente.index
 Route::post('/finalizaCadastro', 'EnderecoController@create')->name('cliente.create');
 
 //CRUD Carrinho
-Route::get('/carrinho-add/{{id_produto}}', 'CarrinhoController@insert'); //TODO: Adicionar item ao carrinho na tela do produto($id) (C)
-Route::get('/carrinho/{id_cliente}', 'CarrinhoController@index'); //*READ: Pega todos os produtos do carrinho (R)
+Route::post('/carrinho/add/{id_produto}', 'CarrinhoController@insert'); //*CREATE: Adicionar item ao carrinho na tela do produto($id) (C)
+Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho'); //*READ: Pega todos os produtos do carrinho (R)
 Route::patch('/carrinho/update/{id_cliente}/{id_produto}', 'CarrinhoController@update'); //* UPDATE: Quantidade do produto (U)
 Route::delete('/carrinho/delete/{id_cliente}/{id_produto}', 'CarrinhoController@remove')->name('carrinho_delete'); //* DELETE: Produto no carrinho (D)
 

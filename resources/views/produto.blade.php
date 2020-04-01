@@ -12,7 +12,7 @@
             <p>Editora: {{ $produto['editora'] }}</p>
             <p>Autor: {{ $produto['autor'] }}</p>
             <p class="preco">R$ {{ $produto['preco'] }}</p>
-            <form action="/{{ $produto->id_produto}}/carrinho-add" enctype="multipart/form-data" method="GET">
+            <form action="../carrinho/add/{{ $produto['id_produto'] }}" enctype="multipart/form-data" method="post">
                 @csrf
                 <button class="btn btn-success">Adicionar ao carrinho</button>
             </form>

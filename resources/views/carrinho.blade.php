@@ -31,7 +31,8 @@
               @csrf
               @method('PATCH')
               <input type="number" id='quantidade' name="quantidade" value={{ $produto->quantidade }} min="1">
-              <button class="remove-product">
+              <a href=''></a>
+              <button class="update-product">
                 <i class="fas fa-sync"></i>
               </button>
             </form>
@@ -45,6 +46,8 @@
           <div class="product-line-price" style="color:#507642;">{{ number_format((((float)str_replace( ['.',','], ['','.'], $produto->preco )*1.0) * $produto->quantidade), 2, '.', '') }}</div>
         </div>
         @endforeach
+        @else
+        <h1>Não há itens no seu carrinho =/</h1>
         @endif
 
         <div class="totals">
