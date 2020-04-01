@@ -14,7 +14,14 @@ class EnderecoController extends Controller
     }
     
     public function index() {
-       return view('endereco');
+       $auth= auth()->user()->auth;
+      if($auth != true){
+//          Verifica se o usuário é diferente de admin
+          return view('endereco');
+      }else{
+          return view('home');
+      }
+       
     }
  
     public function create(Request $request) {     
