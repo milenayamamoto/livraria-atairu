@@ -27,6 +27,6 @@ class Carrinho extends Model
 
 	public function produto()
 	{
-		return $this->hasMany('App\Produto');
+		return $this->hasOne('App\Produto');
 	}
 }

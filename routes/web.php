@@ -11,8 +11,6 @@
 |
 */
 
-use App\Produto;
-
 //Rotas views
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
