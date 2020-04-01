@@ -11,8 +11,8 @@
 }
 
 .forma {
-    width: 35vw;
-    height: 70vh;
+    width: 40vw;
+    height: fit-content;
     padding: 70px 9px;
     margin: 40px auto;
     box-sizing: border-box;
@@ -52,8 +52,6 @@
     }
 
     .forma {
-        width: 35vw;
-        height: 70vh;
         padding: 70px 9px;
         margin: 40px auto;
         box-sizing: border-box;
@@ -63,13 +61,9 @@
 }
 
 @media (min-width: 576px) {
-    .container-cadastro {
-        /* padding: .0rem;
-      margin: .0rem; */
-    }
     .forma {
         width: 88vw;
-        height: 50vh;
+        height: fit-content;
         padding: 36px 80px;
         margin: 40px auto;
     }
@@ -88,7 +82,7 @@
 
     .forma {
         width: 60vw;
-        height: 55vh;
+        height: fit-content;
         padding: 76px 35px;
         margin: 40px auto;
     }
@@ -97,7 +91,7 @@
 @media (min-width: 992px) {
     .forma {
         width: 40vw;
-        height: 65vh;
+        height: fit-content;
         padding: 76px 35px;
         margin: 40px auto;
     }
@@ -110,9 +104,6 @@
 
 @media (min-width: 1200px) {
     .forma {
-        /* width: 40vw; */
-        /* height: 65vh; */
-        /* padding: 76px 73px; */
         margin: 40px auto;
     }
 

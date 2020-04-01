@@ -42,45 +42,37 @@
 				</form>
 			</div>
 			<div class="login">
-				<div class="container mt-5">
-					<div class="row">
-						<div class="col text-center mt-3">
-							<i class="fas fa-user icon"></i>
-						</div>
-						<div class="col">
-							<!-- Authentication Links -->
-							@guest
-							<div id="texto_cadastro">
-								<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-								@if (Route::has('register'))
-								<a class="nav-link" href="{{ route('register') }}">{{ __('Cadastre-se') }}</a>
-							</div>
-							@endif
-							@else
-							<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-								{{ Auth::user()->name }} <span class="caret"></span>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="{{ route('conta.index') }}">
-									{{ __('Minha conta') }}
-								</a>
-								<a class="dropdown-item" href="#">
-									{{ __('Meus pedidos') }}
-								</a>
-
-								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-									document.getElementById('logout-form').submit();">
-									{{ __('Sair') }}
-								</a>
-
-								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-									@csrf
-								</form>
-							</div>
-							@endguest
-						</div>
-					</div>
+				<div class="login-icon">
+					<i class="fas fa-user icon"></i>
 				</div>
+				<!-- Authentication Links -->
+				@guest
+				<div id="texto_cadastro">
+					<a class="nav-link" href="{{ route('login') }}">{{ __('Login / Cadastre-se') }}</a>
+				</div>
+				@endguest
+				@auth
+				<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+					{{ Auth::user()->name }} <span class="caret"></span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="{{ route('conta.index') }}">
+						{{ __('Minha conta') }}
+					</a>
+					<a class="dropdown-item" href="#">
+						{{ __('Meus pedidos') }}
+					</a>
+
+					<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">
+						{{ __('Sair') }}
+					</a>
+
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+						@csrf
+					</form>
+				</div>
+				@endauth
 			</div>
 			<div class="carrinho">
 				<a href="{{ route('carrinho') }}">

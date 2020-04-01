@@ -5,7 +5,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background-color: #dcedc8;
+    background-color: #f2f2f2;
 }
 
 h1 {
@@ -68,6 +68,14 @@ h1 {
 
 #menu .login {
     width: 15%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+#menu .login-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #menu a {
@@ -100,12 +108,13 @@ h1 {
 .navbar .dropdown-menu,
 .navbar .dropdown-item,
 .navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .show > .nav-link {
-    background-color: white;
+.navbar-dark .navbar-nav .nav-link:visited,
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .show > .nav-link:visited,
+.navbar-dark .navbar-nav .show > .nav-link:active {
     font-weight: 800;
-    color: #507642;
+    color: black;
     font-weight: bold;
-    background: #dcedc8;
 }
 
 .navbar ul li {
@@ -117,7 +126,7 @@ h1 {
     margin: auto;
     display: flex;
     justify-content: space-around;
-    background: #dcedc8;
+    background-color: white;
 }
 
 .navbar ul li:hover,
@@ -151,6 +160,10 @@ h1 {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+.navbar .dropdown-item:focus {
+    background-color: #f8f9fa;
 }
 
 footer {
