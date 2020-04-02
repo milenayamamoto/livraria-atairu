@@ -108,13 +108,26 @@ h1 {
 .navbar .dropdown-menu,
 .navbar .dropdown-item,
 .navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link:visited,
 .navbar-dark .navbar-nav .show > .nav-link,
-.navbar-dark .navbar-nav .show > .nav-link:visited,
-.navbar-dark .navbar-nav .show > .nav-link:active {
+.navbar-dark .navbar-nav .nav-link:active,
+.navbar-dark .navbar-nav .nav-link:visited {
     font-weight: 800;
     color: black;
-    font-weight: bold;
+    background-color: white;
+}
+
+.dropdown-menu .dropdown-item:visited,
+.dropdown-menu .dropdown-item:active {
+    font-weight: 800;
+    color: black;
+    background-color: white;
+}
+
+.navbar-dark .navbar-nav .show > .dropdown-item:hover,
+.dropdown-menu .dropdown-item:hover {
+    font-weight: 800;
+    color: black;
+    background-color: #f2f2f2;
 }
 
 .navbar ul li {
@@ -160,10 +173,6 @@ h1 {
     border: none;
     padding: 0;
     margin: 0;
-}
-
-.navbar .dropdown-item:focus {
-    background-color: #f8f9fa;
 }
 
 footer {
