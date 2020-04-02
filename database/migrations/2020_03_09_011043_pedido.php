@@ -15,6 +15,8 @@ class Pedido extends Migration
 	{
 		Schema::create('pedido', function (Blueprint $table) {
 			$table->increments('id_pedido');
+			$table->unsignedInteger('id_cliente');
+			$table->foreign('id_cliente')->references('id')->on('users');
 			$table->string('status');
 			$table->timestamps();
 		});

@@ -17,9 +17,9 @@ class CarrinhoSeeder extends Seeder
 		//Criando um cliente novo
 		$novoUsuario = new User();
 		$novoUsuario->name = 'Jao das Neves';
-		$novoUsuario->cpf = '01234567891';
-		$novoUsuario->email = 'jao@neves.com.br';
-		$novoUsuario->password = '1234';
+		$novoUsuario->cpf = '12345678910';
+		$novoUsuario->email = 'jaod@sneves.com.br';
+		$novoUsuario->password = bcrypt('password');
 		$novoUsuario->save();
 
 		//Criando um carrinho novo

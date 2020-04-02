@@ -38,22 +38,33 @@ Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho'); //*READ: 
 Route::patch('/carrinho/update/{id_cliente}/{id_produto}', 'CarrinhoController@update'); //* UPDATE: Quantidade do produto (U)
 Route::delete('/carrinho/delete/{id_cliente}/{id_produto}', 'CarrinhoController@remove')->name('carrinho_delete'); //* DELETE: Produto no carrinho (D)
 
+
+//CRUD Pedidos
+Route::get('/pedidos', 'PedidoController@index')->name('pedidos'); //TODO: Ver lista de pedidos do user
+Route::get('/pedido/{id_pedido}', 'PedidoController@show'); //TODO: Ver pedido específico do user
+Route::get('/pedido/update/{id_pedido}', 'PedidoController@update'); //TODO: Página de atualização do pedido do user
+Route::patch('/pedido/update/{id_pedido}', 'PedidoController@put'); //TODO: Atualizar pedido do user
+Route::delete('/pedido/delete/{id_pedido}', 'PedidoController@delete'); //TODO: Deletar pedido do user
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Views do produto
 Route::get('/produtos', 'ProdutoController@index');
 Route::get('/produto/{id}', 'ProdutoController@show');
 Route::any('/auth/register', 'HomeController@index');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+//CRUD Produtos
 Route::get('/admin/produto/', 'ProdutoController@admin');
 Route::get('/admin/produto/create', 'ProdutoController@create');
 Route::post('/admin/produto/insert', 'ProdutoController@insert');

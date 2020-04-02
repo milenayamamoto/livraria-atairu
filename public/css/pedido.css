@@ -1,0 +1,36 @@
+#lista-pedidos {
+    height: max-content;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#lista-pedidos h1 {
+    display: block;
+}
+
+#lista-pedidos .total {
+    text-align: center;
+    padding: 5px 20px;
+    border: 1px solid #696969;
+    border-radius: 20px;
+}
+
+#lista-pedidos .lista-pedidos-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 2px solid #696969;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#lista-pedidos .status-pedido {
+    height: 70px;
+}
+
+#lista-pedidos .info-pedido {
+    display: flex;
+    flex-direction: column;
+}

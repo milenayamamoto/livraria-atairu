@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,6 +19,9 @@ h1 {
     margin: auto;
 }
 
+section {
+    font-family: "Roboto", sans-serif;
+}
 /* INÍCIO DO MENU + FOOTER */
 
 #menu {

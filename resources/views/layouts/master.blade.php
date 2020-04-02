@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href={{ asset('css/faq.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/index.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/login.css') }} type="text/css">
+	<link rel="stylesheet" href={{ asset('css/pedido.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/produtos.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/sobre.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/style.css') }} type="text/css">
@@ -59,7 +60,7 @@
 					<a class="dropdown-item" href="{{ route('conta.index') }}">
 						{{ __('Minha conta') }}
 					</a>
-					<a class="dropdown-item" href="#">
+					<a class="dropdown-item" href="{{ route('pedidos') }}">
 						{{ __('Meus pedidos') }}
 					</a>
 

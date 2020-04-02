@@ -32,4 +32,9 @@ class Produto extends Model
 	{
 		return $this->belongsTo('App\Produto_categoria', 'id_categoria', 'id_categoria');
 	}
+
+	public function pedido()
+	{
+		return $this->belongsToMany('App\Pedido' . 'produto_pedido', 'id_pedido', 'id_pedido');
+	}
 }
