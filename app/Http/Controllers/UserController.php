@@ -18,7 +18,7 @@ class UserController extends Controller
         return view('conta');
     }
 
-    public function alteraConta()
+    public function alterarConta()
     {
         $enderecos = Endereco::all();
         return view('alterarConta', compact('enderecos'));
@@ -27,15 +27,41 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $id = auth()->user()->id;
-
-        $usuario = User::find($id);
+        
+        $usuario = User::find($id);     
         $usuario->name = $request->input('nome');
         $usuario->email = $request->input('email');
         $usuario->cpf = $request->input('cpf');
         $usuario->telefone = $request->input('telefone');
         $usuario->password = bcrypt($request->input('password'));
-        $update = $usuario->save();
+        
+        $enderecos = Endereco::all();
+        foreach  ($enderecos as $endereco){
+       
+        }
+       
+       if(isset($endereco) && $endereco->id_usuario == $id ){
+            
+           
+            $endereco = Endereco::find($endereco->id_usuario);  
+            $endereco->cep = $request->input('cep');
+            $endereco->logradouro = $request->input('logradouro');
+            $endereco->bairro = $request->input('bairro');
+            $endereco->uf = $request->input('uf');
+            $endereco->cidade = $request->input('cidade');
+            $endereco->numero = $request->input('numero');
+            $endereco->complemento = $request->input('complemento');
+            
+            $update_end = $endereco->save();
+       }else{
+            return redirect()
+                ->route('cliente.index')
+                ->with('error', 'Cadastre seu endereço');
+       }
 
+        
+        $update = $usuario->save();
+      
         if ($update) {
             return redirect()
                 ->route('home')
@@ -52,7 +78,17 @@ class UserController extends Controller
         $id = auth()->user()->id;
 
         $usuario = User::find($id);
+        
+        $enderecos = Endereco::all();
+        foreach  ($enderecos as $endereco){
+       
+        }
+        $endereco = Endereco::find($endereco->id_endereco);  
+        
+        
         $delete = $usuario->delete();
+        $delete_end = $endereco->delete();
+        
         if ($delete) {
             return redirect()
                 ->route('register')

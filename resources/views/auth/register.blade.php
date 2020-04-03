@@ -2,9 +2,9 @@
 
 @section('content')
 <main>
-    <section>
-    <h1 id="main-cadastro">{{ __('Cadastro de Cliente') }}</h1>
+    <section> 
         <div class="forma">
+             <!-- <h1 id="main-cadastro">{{ __('Cadastro de Cliente') }}</h1> -->
             <div class="container-cadastro p-1 m-5">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -48,7 +48,7 @@
                      <div class="form-group row"> 
                         <label class="cadastro-label" for="login-telefone">{{ __('Digite seu  Telefone:') }}</label> 
                         <div class="col-md-10">
-                            <input id="telefone" type="number" class="form-control cadastro-input @error('telefone') is-invalid @enderror" name="telefone" value="{{ old('telefone') }}" required autocomplete="telefone">
+                            <input id="telefone" type="text" class="form-control cadastro-input @error('telefone') is-invalid @enderror" name="telefone" value="{{ old('telefone') }}" required autocomplete="telefone">
 
                             @error('telefone')
 
@@ -89,6 +89,7 @@
                         </div>
                  </div>
         </div>  
+
     </section>
 </main>
 

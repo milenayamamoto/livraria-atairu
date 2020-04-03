@@ -8,6 +8,7 @@ use App\User;
 
 class EnderecoController extends Controller
 {
+  
     public function __construct()
     {
         $this->middleware('auth');

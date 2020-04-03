@@ -23,12 +23,12 @@ Route::get('/sobre', 'HomeController@sobre');
 
 //CRUD Usuários
 Route::any('/conta', 'UserController@index')->name('conta.index');
-Route::get('/conta/alterarConta', 'UserController@alteraConta')->name('conta.alteraConta');
+Route::get('/conta/alterarConta', 'UserController@alterarConta')->name('conta.alteraConta');
 Route::post('/conta/alterarConta', 'UserController@update')->name('conta.update');
 Route::get('/conta/deletarConta', 'UserController@delete')->name('conta.delete');
 Route::any('/auth/register', 'HomeController@index');
 
-//CRUD Clientes
+//CRUD Endereço
 Route::any('/finalizaCadastro', 'EnderecoController@index')->name('cliente.index');
 Route::post('/finalizaCadastro', 'EnderecoController@create')->name('cliente.create');
 

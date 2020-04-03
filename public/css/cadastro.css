@@ -5,7 +5,7 @@
 }
 
 .cadastro-label {
-    color: #a37b45;
+    color: #507642;
     font-family: "Courier";
     font-size: 16px;
 }
@@ -105,6 +105,7 @@
 @media (min-width: 1200px) {
     .forma {
         margin: 40px auto;
+         box-shadow: 0px 0px 5px 0px #A37B45;
     }
 
     .forma .cadastro-input,
