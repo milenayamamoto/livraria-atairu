@@ -19,8 +19,10 @@ class ProdutoPedido extends Migration
 			$table->unsignedInteger('id_produto');
 			$table->foreign('id_produto')->references('id_produto')->on('produto');
 			$table->string('nome');
+			$table->string('autor');
 			$table->string('quantidade');
 			$table->string('preco');
+			$table->string('imagem');
 			$table->timestamps();
 		});
 	}

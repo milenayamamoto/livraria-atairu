@@ -7,7 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!-- Carousel Glide.js -->
 	<link rel="stylesheet" href={{ asset('js/slick-master/slick/slick.css') }}>
@@ -53,7 +54,8 @@
 				</div>
 				@endguest
 				@auth
-				<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+				<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false" v-pre>
 					{{ Auth::user()->name }} <span class="caret"></span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -82,13 +84,15 @@
 			</div>
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark p-0">
-			<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarDropdownMenuLink" aria-expanded="false" aria-label="Alterna navegação">
+			<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+				aria-controls="navbarDropdownMenuLink" aria-expanded="false" aria-label="Alterna navegação">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav">
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fas fa-bars"></i> Categorias
 						</a>
 						<div class="dropdown-menu m-0" aria-labelledby="navbarDropdownMenuLink">
@@ -121,7 +125,7 @@
 		<footer>
 			<div class="seta">
 				<a href="#menu">
-					<img src={{ asset('img/seta.png') }} alt="">
+					<img src={{ asset('img/up.svg') }} alt="">
 				</a>
 			</div>
 			<div class="container-footer">
@@ -141,11 +145,9 @@
 				<div class="pagamento">
 					<h3>Formas de pagamentos</h3>
 					<ul>
-						<li><img src={{ asset('img/1.png') }} alt=""></li>
-						<li><img src={{ asset('img/2.png') }} alt=""></li>
-						<li><img src={{ asset('img/3.png') }} alt=""></li>
-						<li><img src={{ asset('img/4.png') }} alt=""></li>
-						<li><img src={{ asset('img/5.png') }} alt=""></li>
+						<li><img src={{ asset('img/payment-mastercard.svg') }} alt=""></li>
+						<li><img src={{ asset('img/payment-visa.svg') }} alt=""></li>
+						<li><img src={{ asset('img/payment-paypal.svg') }} alt=""></li>
 					</ul>
 					<div class="social_midia">
 						<h3>Mídias Sociais</h3>
@@ -169,14 +171,20 @@
 	<script src="../js/preenche_cep.js" type="text/javascript"></script>
 	<!-- Bootstrap -->
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
 
-	<!-- Slick slides -->
+	<!-- Optional Slick slides -->
+	<?php if (isset($show_glide) && ($show_glide)) { ?>
 	<script src={{ asset('js/slick-master/slick/slick.js') }}></script>
-
-	<!-- Additional js -->
 	<script src={{ asset('js/index.js') }}></script>
+	<?php } ?>
+
+
 </body>
 
 </html>

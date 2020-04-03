@@ -56,4 +56,5 @@
 
 </main>
 
+<?php $show_glide = TRUE; ?>
 @stop

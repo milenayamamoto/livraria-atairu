@@ -18,7 +18,7 @@ class Pedido extends Model
 	];
 
 	// Tipos de status:
-	// 'pagamento': aguardado pagamento
+	// 'pagamento': aguardando pagamento
 	// 'enviado': produto enviado
 	// 'concluido': pedido concluido
 	// 'cancelado': cancelado por falta de pagamento ou cancelado pelo próprio usuário

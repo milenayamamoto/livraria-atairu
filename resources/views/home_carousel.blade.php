@@ -6,9 +6,6 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -19,15 +16,6 @@
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="../img/slider3.jpg" alt="Terceiro slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../img/slider4.jpg" alt="Quarto slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../img/slider5.jpg" alt="Quinto slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../img/slider6.jpg" alt="Sexto slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

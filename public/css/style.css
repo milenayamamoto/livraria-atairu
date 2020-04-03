@@ -190,10 +190,12 @@ footer {
     color: #fff;
 }
 
+footer .seta {
+    text-align: center;
+    margin-top: -1rem;
+}
+
 footer .seta a {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     transition: 1s;
 }
 
@@ -233,9 +235,11 @@ footer .container-footer .pagamento ul {
 }
 
 footer .container-footer .pagamento img {
-    max-width: 50px;
+    width: 55px;
     border-radius: 6px;
-    padding: 0 5px;
+    padding: 0 10px;
+    margin: 5px;
+    background-color: #fff;
 }
 
 footer .container-footer .social-media {

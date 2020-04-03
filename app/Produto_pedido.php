@@ -16,7 +16,9 @@ class Produto_pedido extends Model
 		'id_pedido',
 		'id_produto',
 		'nome',
+		'autor',
 		'quantidade',
-		'preco'
+		'preco',
+		'imagem'
 	];
 }

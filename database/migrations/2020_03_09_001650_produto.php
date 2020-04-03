@@ -24,7 +24,7 @@ class Produto extends Migration
 			$table->string('edicao')->nullable();
 			$table->string('editora')->nullable();
 			$table->string('preco');
-			$table->string('imagem')->nullable();
+			$table->string('imagem');
 			$table->unsignedInteger('id_categoria');
 			$table->foreign('id_categoria')->references('id_categoria')->on('produto_categoria');
 			$table->timestamps();
