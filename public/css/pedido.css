@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 .pedido {
     min-height: max-content;
     padding-bottom: 250px;
     box-sizing: border-box;
 }
 
+=======
+>>>>>>> 1ae2f37c6ca3c79dd76a45ca4cc9c43fd79a34be
 #lista-pedidos {
     height: max-content;
     margin: auto;
@@ -79,7 +82,11 @@
     padding: 10px;
 }
 
+<<<<<<< HEAD
 .pedido .pedido-lista img {
+=======
+#pedido .pedido-lista img {
+>>>>>>> 1ae2f37c6ca3c79dd76a45ca4cc9c43fd79a34be
     height: 80px;
     margin: auto;
 }
@@ -174,7 +181,11 @@
     border-left: 17px solid tomato;
 }
 
+<<<<<<< HEAD
 .pedido input[type="number"] {
+=======
+#pedido input[type="number"] {
+>>>>>>> 1ae2f37c6ca3c79dd76a45ca4cc9c43fd79a34be
     width: 50px;
 }
 

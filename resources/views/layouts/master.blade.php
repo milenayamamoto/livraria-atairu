@@ -12,7 +12,7 @@
 
 	<!-- Carousel Glide.js -->
 	<link rel="stylesheet" href={{ asset('js/slick-master/slick/slick.css') }}>
-	<link rel="stylesheet" href={{ asset('js/slick-master/slick//slick-theme.css') }}>
+	<link rel="stylesheet" href={{ asset('js/slick-master/slick/slick-theme.css') }}>
 	<link rel="stylesheet" href={{ asset('css/alterarConta.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/cadastro.css') }} type="text/css">
 	<link rel="stylesheet" href={{ asset('css/carrinho.css') }} type="text/css">
@@ -160,7 +160,10 @@
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.js"></script>
+	<script src="js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
 	<script src="../js/preenche_cep.js" type="text/javascript"></script>
+	<script src="../js/validacoes_cliente.js" type="text/javascript"></script>
 	<!-- Bootstrap -->
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

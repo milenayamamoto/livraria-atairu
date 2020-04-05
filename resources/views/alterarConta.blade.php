@@ -23,12 +23,12 @@
                     @forelse($enderecos as $endereco)
 
                     @empty 
-                        $endereco = '';
+                      
                     @endforelse
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Nome Completo:</label>
-                            <input name="nome" class="altera-conta-nome" class="altera-conta-nome" value="{{ auth()->user()->name}}">        
+                            <input id="nome" name="nome" class="altera-conta-nome" class="altera-conta-nome" value="{{ auth()->user()->name}}">        
                         </div>
                     </div>
             </div>
@@ -36,14 +36,14 @@
                 <div class="row altera-conta-div-principal">
                     <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                         <label class="altera-conta-nome">E-mail:</label>
-                        <input name="email" class="altera-conta-nome" class="altera-conta-nome" value="{{ auth()->user()->email}}"> 
+                        <input id="email" name="email" class="altera-conta-nome" class="altera-conta-nome" value="{{ auth()->user()->email}}"> 
                     </div>
                 </div>
                 <div class="container altera-container">
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Senha:</label>
-                            <input name="password" type="password" class="altera-conta-nome"> 
+                            <input id="password" name="password" type="password" class="altera-conta-nome"> 
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Telefone:</label>
-                            <input name="telefone" type="text" class="altera-conta-nome" value="{{ auth()->user()->telefone}}"> 
+                            <input id="telefone" name="telefone" type="text" class="altera-conta-nome" value="{{ auth()->user()->telefone}}"> 
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">CPF:</label>
-                            <input name="cpf" type="text" class="altera-conta-nome" value="{{ auth()->user()->cpf}}"> 
+                            <input id="cpf" name="cpf" type="text" class="altera-conta-nome" value="{{ auth()->user()->cpf}}"> 
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     <div class="altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">CEP:</label>
-                            <input id="cep" name="cep" type="text" class="altera-conta-nome" value="{{ $endereco->cep }}">        
+                            <input id="cep" name="cep" type="text" class="altera-conta-nome" value="{{ isset($endereco->cep) ? $endereco->cep  : ''}}">        
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Logradouro:</label>
-                            <input id="rua" name="logradouro" type="text" value="{{ $endereco->logradouro }}"> 
+                            <input id="rua" name="logradouro" type="text" value="{{ isset($endereco->logradouro) ? $endereco->logradouro : '' }}"> 
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Bairro:</label>
-                            <input id="bairro" name="bairro"  type="text" value="{{ $endereco->bairro }}"> 
+                            <input id="bairro" name="bairro"  type="text" value="{{ isset($endereco->bairro) ? $endereco->bairro : '' }}"> 
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Estado:</label>
-                            <input id="uf" name="uf" type="text" class="altera-conta-nome"  value="{{ $endereco->uf }}"> 
+                            <input id="uf" name="uf" type="text" class="altera-conta-nome"  value="{{ isset($endereco->uf) ? $endereco->uf : '' }}"> 
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Cidade:</label>
-                            <input id="cidade" name="cidade" type="text" class="altera-conta-nome"  value="{{ $endereco->cidade }}"> 
+                            <input id="cidade" name="cidade" type="text" class="altera-conta-nome"  value="{{ isset($endereco->cidade) ? $endereco->cidade : ''}}"> 
                         </div>
                     </div>
                 </div> 
@@ -107,7 +107,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Número:</label>
-                            <input id="numero" name="numero" type="number" class="altera-conta-nome" value="{{ $endereco->numero }}"> 
+                            <input id="numero" name="numero" type="number" class="altera-conta-nome" value="{{ isset($endereco->numero) ? $endereco->numero : '' }}"> 
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                     <div class="row altera-conta-div-principal">
                         <div class="col-8 col-sm-6 col-lg-6 text-left altera-conta-div-auxiliar">
                             <label class="altera-conta-nome">Complemento:</label>
-                            <input id="complemento" name="complemento" type="text" class="altera-conta-nome"  value="{{ $endereco->complemento }}"> 
+                            <input id="complemento" name="complemento" type="text" class="altera-conta-nome"  value="{{ isset($endereco->complemento) ? $endereco->complemento : '' }}"> 
                         </div>
                     </div>
                 </div>

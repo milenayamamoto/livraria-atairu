@@ -40,10 +40,10 @@ class UserController extends Controller
        
         }
        
-       if(isset($endereco) && $endereco->id_usuario == $id ){
-            
-           
-            $endereco = Endereco::find($endereco->id_usuario);  
+       if(isset($endereco) && $endereco->id_usuario == $id ){;
+            $id = $endereco->id_endereco;
+    
+            $endereco = Endereco::find($id); 
             $endereco->cep = $request->input('cep');
             $endereco->logradouro = $request->input('logradouro');
             $endereco->bairro = $request->input('bairro');

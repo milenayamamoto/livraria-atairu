@@ -35,7 +35,7 @@
                     <div class="form-group row"> 
                         <label class="cadastro-label" for="login-cpf">{{ __('Digite seu  CPF:') }}</label> 
                         <div class="col-md-10">
-                            <input id="cpf" type="text" class="form-control cadastro-input @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}" required autocomplete="cpf">
+                            <input id="cpf" type="text" class="form-control cadastro-input @error('cpf') is-invalid @enderror" name="cpf" value="{{ old('cpf') }}" required autocomplete="cpf" max="11">
 
                             @error('cpf')
 
@@ -48,7 +48,7 @@
                      <div class="form-group row"> 
                         <label class="cadastro-label" for="login-telefone">{{ __('Digite seu  Telefone:') }}</label> 
                         <div class="col-md-10">
-                            <input id="telefone" type="text" class="form-control cadastro-input @error('telefone') is-invalid @enderror" name="telefone" value="{{ old('telefone') }}" required autocomplete="telefone">
+                            <input id="telefone" type="text" class="form-control cadastro-input @error('telefone') is-invalid @enderror" name="telefone" value="{{ old('telefone') }}" required autocomplete="telefone" max="11">
 
                             @error('telefone')
 
