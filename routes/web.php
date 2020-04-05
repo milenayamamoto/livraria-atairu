@@ -40,7 +40,7 @@ Route::delete('/carrinho/delete/{id_cliente}/{id_produto}', 'CarrinhoController@
 
 
 //CRUD Pedidos
-Route::post('/pedidos/new', 'PedidoController@insert'); //TODO: CREATE - Criar novo pedido
+Route::post('/pedidos/new', 'PedidoController@insert'); //*CREATE - Criar novo pedido
 Route::get('/pedidos', 'PedidoController@index')->name('pedidos'); //*READ: Ver lista de pedidos do user
 Route::get('/pedido/{id_pedido}', 'PedidoController@show'); //*READ: Ver pedido específico do user
 Route::get('/pedido/update/{id_pedido}', 'PedidoController@update'); //*UPDATE: Página de atualização do pedido do user
