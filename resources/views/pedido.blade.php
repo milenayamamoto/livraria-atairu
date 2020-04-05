@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<section id="pedido">
+<section class="pedido">
   <div class='container py-5'>
     @isset($pedido)
     <div class='d-flex flex-direction-column justify-content-center align-items-center'>
@@ -49,6 +49,7 @@
     @endif
 
     @isset($produtos_pedido)
+    <?php $total = 0 ?>
     <div class='m-0 p-0 mt-5'>
       <span class="btn btn-pedido btn-dark">
         Total de produtos: <span class="badge badge-light">{{ count($produtos_pedido) }}</span>
@@ -68,14 +69,20 @@
         </div>
         <div class='d-flex flex-column'>
           <span class='font-weight-bold'>Preço</span>
-          <span>R${{ $produto['preco'] }}</span>
+          <span>R${{ number_format((((float)str_replace( ['.',','], ['','.'], $produto['preco'] )*1.0) * $produto['quantidade']), 2, '.', '') }}</span>
+          <?php $total = number_format((((float)str_replace( ['.',','], ['','.'], $produto['preco'] )*1.0) * $produto['quantidade']), 2, '.', '') + $total; ?>
         </div>
       </div>
       @endforeach
     </div>
+    <div class="m-0 p-0 float-right">
+      <span class="btn btn-total btn-dark">
+        Total: R$ {{ number_format($total, 2) ?? '' }}
+      </span>
+    </div>
     @endisset
 
-    <a href={{ url()->previous() }} class='btn btn-link mt-5'><i class="fas fa-arrow-left"></i> Voltar</a>
+    <a href={{ route('pedidos') }} class='btn btn-link mt-5'><i class="fas fa-arrow-left"></i> Voltar</a>
   </div>
 </section>
 

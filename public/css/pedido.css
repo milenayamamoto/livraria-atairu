@@ -1,3 +1,9 @@
+.pedido {
+    min-height: max-content;
+    padding-bottom: 250px;
+    box-sizing: border-box;
+}
+
 #lista-pedidos {
     height: max-content;
     margin: auto;
@@ -44,16 +50,27 @@
     flex-direction: column;
 }
 
-#pedido .btn-pedido {
+.pedido .btn-pedido {
     border-radius: 0.5rem 0.5rem 0 0;
+    font-size: 18px;
 }
 
-#pedido .lista {
-    border-radius: 0 0.5rem 0.5rem 0.5rem;
+.pedido .badge {
+    font-size: 16px;
+}
+
+.pedido .btn-total {
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 13px;
+    font-size: 16px;
+}
+
+.pedido .lista {
+    border-radius: 0 0.5rem 0 0.5rem;
     border: 2px solid #696969;
 }
 
-#pedido .pedido-lista {
+.pedido .pedido-lista {
     display: grid;
     grid-template-columns: 1fr 5fr 2fr 1fr;
     border-top: 0.5px solid #696969;
@@ -62,7 +79,7 @@
     padding: 10px;
 }
 
-#pedido .pedido-lista img {
+.pedido .pedido-lista img {
     height: 80px;
     margin: auto;
 }
@@ -157,7 +174,7 @@
     border-left: 17px solid tomato;
 }
 
-#pedido input[type="number"] {
+.pedido input[type="number"] {
     width: 50px;
 }
 

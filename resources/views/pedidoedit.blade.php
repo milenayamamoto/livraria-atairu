@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<section id="pedido">
+<section class="pedido">
   <div class='container py-5'>
 
     @isset($produtos_pedido)
@@ -10,7 +10,7 @@
         <img src={{ asset('img/orders/order.svg') }}>
       </div>
       <div class='ml-5'>
-        <h1>ID do Pedido: #{{ $produtos_pedido[0]->id_pedido }}</h1>
+        <h1>ID do Pedido: #{{ $produtos_pedido->first->id_pedido->id_pedido }}</h1>
         <h2>Editar Pedido</h2>
       </div>
     </div>
@@ -50,7 +50,7 @@
     </div>
     @endisset
 
-    <a href={{ url()->previous() }} class='btn btn-link mt-5'><i class="fas fa-arrow-left"></i> Voltar</a>
+    <a href={{ route('pedidos') }} class='btn btn-link mt-5'><i class="fas fa-arrow-left"></i> Voltar</a>
   </div>
 </section>
 

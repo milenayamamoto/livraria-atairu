@@ -44,13 +44,13 @@
 				</form>
 			</div>
 			<div class="login">
-				<div class="login-icon">
+				<div>
 					<i class="fas fa-user icon"></i>
 				</div>
 				<!-- Authentication Links -->
 				@guest
 				<div id="texto_cadastro">
-					<a class="nav-link" href="{{ route('login') }}">{{ __('Login / Cadastre-se') }}</a>
+					<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 				</div>
 				@endguest
 				@auth
@@ -83,33 +83,24 @@
 				</a>
 			</div>
 		</div>
-		<nav class="navbar navbar-expand-lg navbar-dark p-0">
+		<nav class="navbar navbar-expand-lg navbar-light p-0">
 			<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
 				aria-controls="navbarDropdownMenuLink" aria-expanded="false" aria-label="Alterna navegação">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-bars"></i> Categorias
-						</a>
-						<div class="dropdown-menu m-0" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="/produtos/categoria/1">Biografia</a>
-							<a class="dropdown-item" href="/produtos/categoria/2">Informática</a>
-							<a class="dropdown-item" href="/produtos/categoria/3">Literatura Estrangeira</a>
-							<a class="dropdown-item" href="/produtos/categoria/4">Literatura Nacional</a>
-						</div>
+					<li class="nav-item">
+						<a class="dropdown-item" href="/produtos/categoria/1">Biografia</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/produtos">Mais Vendidos</a>
+						<a class="dropdown-item" href="/produtos/categoria/2">Informática</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/produtos">Lançamentos</a>
+						<a class="dropdown-item" href="/produtos/categoria/3">Literatura Estrangeira</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/produtos">Ofertas do Dia</a>
+						<a class="dropdown-item" href="/produtos/categoria/4">Literatura Nacional</a>
 					</li>
 				</ul>
 			</div>
@@ -117,6 +108,7 @@
 
 	</header>
 	<div class="page-container">
+
 
 
 		@yield('content')

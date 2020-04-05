@@ -8,6 +8,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f2f2f2;
+    font-family: "Courier";
+    font-weight: 100;
 }
 
 h1 {
@@ -21,6 +23,10 @@ h1 {
 
 section {
     font-family: "Roboto", sans-serif;
+}
+
+.btn-success {
+    background-color: #507642;
 }
 /* INÍCIO DO MENU + FOOTER */
 
@@ -72,15 +78,12 @@ section {
 }
 
 #menu .login {
-    width: 15%;
-    display: grid;
-    grid-template-columns: 30% 70%;
-}
-
-#menu .login-icon {
+    width: auto;
     display: flex;
+    max-width: 15vw;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 #menu a {
@@ -112,10 +115,10 @@ section {
 .navbar,
 .navbar .dropdown-menu,
 .navbar .dropdown-item,
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .show > .nav-link,
-.navbar-dark .navbar-nav .nav-link:active,
-.navbar-dark .navbar-nav .nav-link:visited {
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link:active,
+.navbar-light .navbar-nav .nav-link:visited {
     font-weight: 800;
     color: black;
     background-color: white;
@@ -128,7 +131,7 @@ section {
     background-color: white;
 }
 
-.navbar-dark .navbar-nav .show > .dropdown-item:hover,
+.navbar-light .navbar-nav .show > .dropdown-item:hover,
 .dropdown-menu .dropdown-item:hover {
     font-weight: 800;
     color: black;
@@ -137,6 +140,14 @@ section {
 
 .navbar ul li {
     margin-bottom: 1.2px;
+}
+
+.navbar .nav-item {
+    padding: 10px 0;
+}
+
+.navbar .nav-item .dropdown-item:hover {
+    color: green;
 }
 
 .navbar-nav {
@@ -149,28 +160,28 @@ section {
 
 .navbar ul li:hover,
 .navbar .dropdown-menu a:hover,
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover {
     color: #507642;
 }
 
-.navbar-dark .navbar-toggler,
+.navbar-light .navbar-toggler,
 .navbar-toggler-icon {
-    border-color: #fff;
-    color: #fff;
+    border-color: black;
+    color: black;
 }
 
-.navbar-dark #navbarNavDropdown {
+.navbar-light #navbarNavDropdown {
     border-bottom: 1px solid black;
     padding-left: 10px;
 }
 
-.navbar-dark .navbarNavDropdown .navbar-nav .show .dropdown-item,
-.navbar-dark
+.navbar-light .navbarNavDropdown .navbar-nav .show .dropdown-item,
+.navbar-light
     .navbarNavDropdown
     .navbar-nav
     .show
     .dropdown-menu
-    .navbar-dark
+    .navbar-light
     .navbarNavDropdown
     .navbar-nav
     .show
@@ -193,6 +204,7 @@ footer {
 footer .seta {
     text-align: center;
     margin-top: -1rem;
+    margin-bottom: -1px;
 }
 
 footer .seta a {
@@ -291,10 +303,6 @@ main {
 }
 
 @media (max-width: 576px) {
-    #texto_cadastro {
-        display: none;
-    }
-
     #menu .logo {
         width: 100px;
     }

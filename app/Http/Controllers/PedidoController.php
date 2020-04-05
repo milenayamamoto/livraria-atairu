@@ -14,6 +14,50 @@ class PedidoController extends Controller
 		$this->middleware('auth');
 	}
 
+	public function insert()	//Envia o update
+	{
+
+		$id_user = auth()->user()->id;
+
+		//Cria novo pedido
+		$novoPedido = Pedido::create(
+			[
+				'id_cliente' => $id_user,
+				'status' => 'pagamento',
+			]
+		);
+		$novoPedido->save();
+
+		//Pega produtos do carrinho
+		$produtosPedido = DB::table('carrinho')
+			->join('produto', 'carrinho.id_produto', '=', 'produto.id_produto')
+			->where('carrinho.id_cliente', '=', $id_user)
+			->select('carrinho.id_cliente', 'carrinho.id_produto AS id_produto', 'produto.imagem', 'carrinho.produto_nome AS titulo', 'produto.autor', 'carrinho.quantidade', 'carrinho.preco')
+			->get();
+
+		//Adiciona produtos do carrinho do cliente ao pedido
+		$produtosPedido->map(function ($item) {
+			$novoprodutosPedido = new Produto_pedido();
+			$id_pedido = DB::table('pedido')->orderBy('id_pedido', 'desc')->select('id_pedido')->first();
+			$novoprodutosPedido->id_pedido = $id_pedido->id_pedido;
+			$novoprodutosPedido->id_produto = $item->id_produto;
+			$novoprodutosPedido->nome = $item->titulo;
+			$novoprodutosPedido->autor = $item->autor;
+			$novoprodutosPedido->quantidade = $item->quantidade;
+			$novoprodutosPedido->preco = $item->preco;
+			$novoprodutosPedido->imagem = $item->imagem;
+			$novoprodutosPedido->save();
+		});
+
+		//Limpa o carrinho
+		DB::table('carrinho')
+			->join('produto', 'carrinho.id_produto', '=', 'produto.id_produto')
+			->where('carrinho.id_cliente', '=', $id_user)
+			->delete();
+
+		return redirect('pedidos');
+	}
+
 	public function index()	//Volta todos os pedidos do usuário logado
 	{
 		$id_user = auth()->user()->id;

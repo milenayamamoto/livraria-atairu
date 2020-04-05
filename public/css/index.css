@@ -1,7 +1,6 @@
 #home {
     font-family: "Roboto", sans-serif;
     background: #dcedc8;
-
 }
 
 #home h2 {
@@ -66,16 +65,14 @@
 }
 
 .newsletter .input-group {
-    width: 50%;
-    padding-left: 30px;
+    width: 30%;
     font-family: "Courier";
+    min-width: max-content;
 }
 
 .newsletter .form-control {
     margin-bottom: 0;
-    width: 70%;
-    flex: inherit;
-    
+    width: 80%;
 }
 
 @media (max-width: 768px) {
@@ -87,10 +84,9 @@
     .newsletter button {
         font-size: 14px;
         padding: 5px 10px;
-        margin-left: 5px;        
+        margin-left: 5px;
     }
 }
-
 
 /* CAROUSEL */
 h1 {
@@ -202,6 +198,7 @@ h1 div:first-child {
 }
 .our-team .team-content {
     margin-bottom: 20px;
+    padding: 10px;
 }
 .our-team .title {
     font-size: 18px;

@@ -4,7 +4,7 @@
 <section id="lista-pedidos">
   <div class='container py-5'>
     <h1>Meus pedidos</h1>
-    @isset($pedidos)
+    @if(count($pedidos)>=1)
     <div class='text-center my-5'>
       <span class="btn btn-dark">
         Total de pedidos: <span class="badge badge-light">{{ count($pedidos) }}</span>
@@ -104,14 +104,13 @@
 
     </div>
     @endforeach
-    @endisset
+    @endif
 
-    @empty($pedidos)
-    <div class='text-center mt-5'>
+    @if(count($pedidos)<1) <div class='text-center mt-5'>
       <img src={{ asset('img/orders/no-orders.svg') }}>
       <h3 class='mt-5'>Nenhum pedido feito até agora</h3>
-    </div>
-    @endempty
+  </div>
+  @endif
   </div>
 </section>
 

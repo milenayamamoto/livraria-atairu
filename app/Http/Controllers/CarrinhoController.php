@@ -23,7 +23,7 @@ class CarrinhoController extends Controller
 			$resultado = DB::table('carrinho')
 				->join('produto', 'carrinho.id_produto', '=', 'produto.id_produto')
 				->where('carrinho.id_cliente', '=', $id_user)
-				->select('carrinho.id_cliente', 'carrinho.id_produto AS id_produto', 'produto.imagem', 'carrinho.produto_nome AS titulo', 'carrinho.quantidade', 'carrinho.preco')
+				->select('carrinho.id_cliente', 'carrinho.id_produto AS id_produto', 'produto.imagem', 'carrinho.produto_nome AS titulo', 'produto.autor', 'carrinho.quantidade', 'carrinho.preco')
 				->get();
 
 			return view('carrinho', compact('resultado'));

@@ -1,46 +1,3 @@
-#carrinho-container .container {
-    margin: auto !important;
-}
-#carrinho-container .media {
-    font-family: "Courier";
-    font-weight: bold;
-    color: #507642;
-}
-
-#carrinho-container .product-image {
-    float: left;
-    width: 20%;
-}
-
-#carrinho-container .product-details {
-    float: left;
-    width: 37%;
-    font-family: "Courier";
-}
-
-#carrinho-container .product-price {
-    float: left;
-    width: 12%;
-    font-family: "Courier";
-}
-
-#carrinho-container .product-quantity {
-    float: left;
-    width: 10%;
-    font-family: "Courier";
-}
-
-#carrinho-container .product-removal {
-    float: left;
-    width: 9%;
-}
-
-#carrinho-container .product-line-price {
-    float: left;
-    width: 12%;
-    text-align: right;
-}
-
 .group:before,
 .shopping-cart:before,
 .column-labels:before,
@@ -78,31 +35,11 @@
 }
 
 /* Body/Header stuff */
-body {
-    padding: 0px 30px 30px 20px;
-    font-family: "Courier";
-    font-weight: 100;
-    font-family: "Courier";
-}
-
-#carrinho-container .tituloprincipal {
-    font-weight: 100;
-    font-family: "Courier";
-    font-weight: bold;
-    color: #507642;
-    margin-bottom: 100px;
-}
-
 label {
     color: #aaa;
     font-family: "Courier";
     font-weight: bold;
     color: #507642;
-}
-
-#carrinho-container .shopping-cart {
-    margin-top: -45px;
-    font-family: "Courier";
 }
 
 /* Coluna headers */
@@ -118,86 +55,14 @@ label {
 }
 
 /* Produtos */
-#carrinho-container .product {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    font-family: "Courier";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#carrinho-container .product .product-image {
-    text-align: center;
-}
-#carrinho-container .product .product-image img {
-    width: 100px;
-}
-#carrinho-container .product .product-details .product-title {
-    margin-right: 20px;
-    font-family: "Courier";
-    font-weight: bold;
-    color: #507642;
-}
-#carrinho-container .product .product-details .product-description {
-    margin: 5px 20px 5px 0;
-    line-height: 1.4em;
-    color: #507642;
-}
-#carrinho-container .product .product-quantity input {
-    width: 40px;
-    color: #507642;
-}
-#carrinho-container .product .update-product {
-    border: 0;
-    padding: 4px 8px;
-    background-color: #507642;
-    color: #fff;
-    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
-    font-size: 12px;
-    border-radius: 3px;
-}
-#carrinho-container .product .update-product:hover {
-    background-color: red;
+.pedido .checkout {
+    display: block;
+    margin-top: 10rem;
 }
 
-/* Totals section */
-#carrinho-container .totals .totals-item {
-    float: right;
-    clear: both;
-    width: 100%;
-    margin-bottom: 10px;
-}
-#carrinho-container .totals .totals-item label {
-    float: left;
-    clear: both;
-    width: 79%;
-    text-align: right;
-}
-#carrinho-container .totals .totals-item .totals-value {
-    float: right;
-    width: 21%;
-    text-align: right;
-    color: #507642;
-    font-family: "Courier";
-}
-#carrinho-container .totals .totals-item-total {
-    font-family: "Courier";
-}
-
-#carrinho-container .checkout {
-    float: right;
-    border: 0;
-    margin-top: 20px;
-    padding: 6px 25px;
-    background-color: #507642;
-    color: #fff;
-    font-size: 25px;
-    border-radius: 3px;
-}
-
-#carrinho-container .checkout:hover {
-    background-color: #494;
+.pedido .btn-checkout {
+    padding: 10px 20px;
+    font-size: 20px;
 }
 
 /* responsividade para  tablet */
