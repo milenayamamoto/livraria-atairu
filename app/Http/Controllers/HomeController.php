@@ -51,4 +51,22 @@ class HomeController extends Controller
     {
         return view('faq');
     }
+
+    public function alta()
+    {
+        $editora = Produto::where('editora', 'LIKE', '%' . 'Alta' . '%')->get();
+        return view('editora', compact('editora'));
+    }
+
+    public function rocco()
+    {
+        $editora = Produto::where('editora', 'LIKE', '%' . 'Rocco' . '%')->get();
+        return view('editora', compact('editora'));
+    }
+
+    public function ciadasletras()
+    {
+        $editora = Produto::where('editora', 'LIKE', '%' . 'Companhia' . '%')->get();
+        return view('editora', compact('editora'));
+    }
 }

@@ -14,17 +14,26 @@ class CarrinhoSeeder extends Seeder
 	 */
 	public function run()
 	{
-		//Criando um cliente novo
+		//Criando um admin
 		$novoUsuario = new User();
-		$novoUsuario->name = 'Jao das Neves';
+		$novoUsuario->name = 'Admin';
 		$novoUsuario->cpf = '12345678910';
-		$novoUsuario->email = 'jaod@sneves.com.br';
+		$novoUsuario->email = 'admin@atairu.com.br';
+		$novoUsuario->password = bcrypt('password');
+		$novoUsuario->auth = 1;
+		$novoUsuario->save();
+
+		//Criando um cliente normal
+		$novoUsuario = new User();
+		$novoUsuario->name = 'Carla de Souza';
+		$novoUsuario->cpf = '98765432198';
+		$novoUsuario->email = 'carlasouza@gmail.com.br';
 		$novoUsuario->password = bcrypt('password');
 		$novoUsuario->save();
 
 		//Criando um carrinho novo
 		$novoCarrinho = new Carrinho();
-		$novoCarrinho->id_cliente = DB::table('users')->where('name', 'Jao das Neves')->value('id');
+		$novoCarrinho->id_cliente = DB::table('users')->where('name', 'Admin')->value('id');
 		$novoCarrinho->id_produto = DB::table('produto')->where('isbn', '9788520927823')->value('id_produto');
 		$novoCarrinho->produto_nome = DB::table('produto')->where('isbn', '9788520927823')->value('nome');
 		$novoCarrinho->quantidade = '1';

@@ -16,22 +16,22 @@ class PedidosSeeder extends Seeder
     {
         //Criando pedido diferentes para o mesmo cliente
         $novoPedido1 = new Pedido();
-        $novoPedido1->id_cliente = DB::table('users')->where('name', 'Jao das Neves')->value('id');
+        $novoPedido1->id_cliente = DB::table('users')->where('name', 'Admin')->value('id');
         $novoPedido1->status = 'pagamento';
         $novoPedido1->save();
 
         $novoPedido2 = new Pedido();
-        $novoPedido2->id_cliente = DB::table('users')->where('name', 'Jao das Neves')->value('id');
+        $novoPedido2->id_cliente = DB::table('users')->where('name', 'Admin')->value('id');
         $novoPedido2->status = 'enviado';
         $novoPedido2->save();
 
         $novoPedido3 = new Pedido();
-        $novoPedido3->id_cliente = DB::table('users')->where('name', 'Jao das Neves')->value('id');
+        $novoPedido3->id_cliente = DB::table('users')->where('name', 'Admin')->value('id');
         $novoPedido3->status = 'concluido';
         $novoPedido3->save();
 
         $novoPedido4 = new Pedido();
-        $novoPedido4->id_cliente = DB::table('users')->where('name', 'Jao das Neves')->value('id');
+        $novoPedido4->id_cliente = DB::table('users')->where('name', 'Admin')->value('id');
         $novoPedido4->status = 'cancelado';
         $novoPedido4->save();
 

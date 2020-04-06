@@ -20,6 +20,10 @@ Route::get('/faq', 'HomeController@faq');
 Route::get('/login', 'HomeController@login');
 Route::get('/sobre', 'HomeController@sobre');
 
+//Home: Views Editoras
+Route::get('/alta', 'HomeController@alta');
+Route::get('/rocco', 'HomeController@rocco');
+Route::get('/ciadasletras', 'HomeController@ciadasletras');
 
 //CRUD Usuários
 Route::any('/conta', 'UserController@index')->name('conta.index');

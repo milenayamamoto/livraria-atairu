@@ -12,33 +12,39 @@
 		<div class="row py-5 editoras">
 			<div class="col-lg-3">
 				<!-- Item -->
-				<figure class="caption-3 mb-0 shadow-sm p-3">
-					<img src="../img/alta-books-bg.jpg" alt="" class="w-100 editora-imagem">
-					<figcaption class="px-3 py-3 bg-white shadow-sm">
-						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/Alta-Books.jpg"></h2>
-					</figcaption>
-				</figure>
+				<a href='../alta'>
+					<figure class="caption-3 mb-0 shadow-sm p-3">
+						<img src="../img/alta-books-bg.jpg" alt="" class="w-100 editora-imagem">
+						<figcaption class="px-3 py-3 bg-white shadow-sm">
+							<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/Alta-Books.jpg"></h2>
+						</figcaption>
+					</figure>
+				</a>
 
 			</div>
 
 			<div class="col-lg-3">
 				<!-- Item -->
-				<figure class="caption-3 mb-0 shadow-sm p-3">
-					<img src="../img/rocco-bg.jpg" alt="" class="w-100 editora-imagem">
-					<figcaption class="px-3 py-3 bg-white shadow-sm">
-						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/rocco.jpg"></h2>
-					</figcaption>
-				</figure>
+				<a href='../rocco'>
+					<figure class="caption-3 mb-0 shadow-sm p-3">
+						<img src="../img/rocco-bg.jpg" alt="" class="w-100 editora-imagem">
+						<figcaption class="px-3 py-3 bg-white shadow-sm">
+							<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/rocco.jpg"></h2>
+						</figcaption>
+					</figure>
+				</a>
 
 			</div>
 			<div class="col-lg-3">
 				<!-- Item -->
-				<figure class="caption-3 mb-0 shadow-sm p-3">
-					<img src="../img/companhia-das-letras-bg.jpg" alt="" class="w-100 editora-imagem">
-					<figcaption class="px-3 py-3 bg-white shadow-sm">
-						<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/companhia-das-letras.jpg"></h2>
-					</figcaption>
-				</figure>
+				<a href='../ciadasletras'>
+					<figure class="caption-3 mb-0 shadow-sm p-3">
+						<img src="../img/companhia-das-letras-bg.jpg" alt="" class="w-100 editora-imagem">
+						<figcaption class="px-3 py-3 bg-white shadow-sm">
+							<h2 class="h5 m-0 font-weight-bold font-italic"><img src="../img/companhia-das-letras.jpg"></h2>
+						</figcaption>
+					</figure>
+				</a>
 
 			</div>
 	</section>
@@ -51,10 +57,10 @@
 					<div class="single">
 						<p>Cadastre seu e-mail e ganhe um cupom para sua primeira compra:</p>
 						<div class="input-group">
-						<input type="email" class="form-control" placeholder="Digite seu e-mail">
-						<span class="input-group-btn">
-							<button class="btn btn-theme" type="submit">Enviar</button>
-						</span>
+							<input type="email" class="form-control" placeholder="Digite seu e-mail">
+							<span class="input-group-btn">
+								<button class="btn btn-theme" type="submit">Enviar</button>
+							</span>
 						</div>
 					</div>
 				</div>
