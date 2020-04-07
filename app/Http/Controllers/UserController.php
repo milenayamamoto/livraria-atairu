@@ -53,10 +53,24 @@ class UserController extends Controller
             $endereco->complemento = $request->input('complemento');
             
             $update_end = $endereco->save();
-       }else{
             return redirect()
-                ->route('cliente.index')
-                ->with('error', 'Cadastre seu endereço');
+            ->route('home');
+       }else{
+        $endereco = Endereco::create(
+            [   
+                'cep' => $request->input('cep'),
+                'logradouro' => $request->input('logradouro'),
+                'bairro' => $request->input('bairro'),
+                'uf' => $request->input('uf'),
+                'cidade' => $request->input('cidade'),
+                'numero' => $request->input('numero'),
+                'complemento' => $request->input('complemento'),
+                'id_usuario' => $id
+            ]); 
+        $endereco->save();
+
+            return redirect()
+                ->route('home');
        }
 
         

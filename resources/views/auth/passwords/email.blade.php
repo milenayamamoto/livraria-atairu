@@ -4,7 +4,7 @@
 <main class="container-fluid" id="main-login">
     <section class="row justify-content-center">
         <section class="col-12 col-sm-6 col-lg-6 container-email mt-5">
-            <!-- <div class="card-header email-label">{{ __('Recuperar Senha') }}</div> -->
+            <div class="card-header email-label">{{ __('Recuperar Senha') }}</div>
 
             <div class="card-body">
                 @if (session('status'))

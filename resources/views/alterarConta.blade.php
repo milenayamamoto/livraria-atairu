@@ -21,7 +21,7 @@
                 <form method="POST" action="{{route('conta.update')}}" >
                     {{csrf_field()}}
                     @forelse($enderecos as $endereco)
-
+                    
                     @empty 
                       
                     @endforelse
@@ -120,17 +120,17 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-secondary altera-conta-botao" >Alterar Cadastro</button>
-
-                <div class="form-group">
-                    <label class="altera-conta-nome">Desejo excluir a conta</label>
-                    <a class="btn btn-link" href="{{ route('conta.delete') }}">
-                        {{ __('Excluir cadastro') }}
-                    </a>
-                </div>
             </div>
         </div>
         </form>
     </section>
+    <section>
+    <div class="form-group mt-5">
+                    <label class="altera-conta-nome">Desejo excluir a conta</label>
+                    <a class="btn btn-secondary btn-danger" href="{{ route('conta.delete') }}">
+                        {{ __('Excluir cadastro') }}
+                    </a>
+                </div>
+    </section>
 </main>
-
 @stop

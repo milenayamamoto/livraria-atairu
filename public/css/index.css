@@ -98,7 +98,11 @@
     color: #507642;
     font-family: "Courier";
     font-weight: bold;
+<<<<<<< HEAD
+    margin-bottom: 50px
+=======
     margin-bottom: 50px;
+>>>>>>> 5e3f13ce67b0f03970b5170e9278aa208823c5f0
 }
 
 .newsletter .input-group {
