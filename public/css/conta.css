@@ -3,10 +3,12 @@
 }
 
 #conta-principal .conta-div-principal{
-  margin-top: 10px;
+  margin-top: 20px;
   box-shadow: 0px 0px 10px 0px rgba(134,148,42,0.8);
   padding: 20px;
   max-width: 940px;
+  color: #507642;
+  font-family: "Courier";
 }
 
 #conta-principal .conta-div-principal img{
@@ -24,7 +26,7 @@
   padding: 0;
   margin: 0;
   font-size: 20px;
-  color: black;
+  color: #507642;
 }
 
 #conta-principal .conta-div-principal .paraf-conta a:hover{

@@ -13,7 +13,7 @@
 		@endif
 		<div class="row main-produtos">
 
-			@if(isset($produtos))
+			@if(count($produtos)>=1)
 
 			@foreach($produtos as $produto)
 
@@ -31,7 +31,7 @@
 			</div>
 			@endforeach
 
-			{{ $produtos->render() }}
+			{{-- {{ $produtos->render() }} --}}
 
 			@else
 

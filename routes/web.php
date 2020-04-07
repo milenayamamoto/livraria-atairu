@@ -19,6 +19,7 @@ Route::get('/contato', 'HomeController@contato');
 Route::get('/faq', 'HomeController@faq');
 Route::get('/login', 'HomeController@login');
 Route::get('/sobre', 'HomeController@sobre');
+Route::post('/busca', 'HomeController@busca');
 
 //Home: Views Editoras
 Route::get('/alta', 'HomeController@alta');

@@ -52,6 +52,13 @@ class HomeController extends Controller
         return view('faq');
     }
 
+    public function busca(Request $request)
+    {
+        $produtos = Produto::where('nome', 'LIKE', '%' . $request->busca . '%')->get();
+
+        return view('produtos', compact('produtos'));
+    }
+
     public function alta()
     {
         $editora = Produto::where('editora', 'LIKE', '%' . 'Alta' . '%')->get();
