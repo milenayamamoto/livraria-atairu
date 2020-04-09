@@ -11,11 +11,17 @@ use Illuminate\Http\File;
 
 class ProdutoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $produtos = Produto::paginate(9);
         $categorias = Produto_categoria::all();
-        return view('produtos', compact('produtos', 'categorias'));
+           
     }
 
     public function show($id_produto)
@@ -30,14 +36,26 @@ class ProdutoController extends Controller
     {
         $produto = Produto::all();
         $categoria = Produto_categoria::all();
-        return view('admin', compact('produto', 'categoria'));
+        $auth= auth()->user()->auth;
+        if($auth){
+            return view('admin', compact('produto', 'categoria'));
+        }else{
+            return view('home');
+        }
+        
+
     }
 
     public function create()
     {
         $categorias = Produto_categoria::all();
-
-        return view('cadastroProduto', compact('categorias'));
+        
+        $auth= auth()->user()->auth;
+        if($auth){
+            return view('cadastroProduto', compact('categorias'));
+        }else{
+            return view('home');
+        }
     }
 
 
@@ -80,7 +98,12 @@ class ProdutoController extends Controller
         $produto = Produto::find($id_produto);
         $categorias = Produto_categoria::all();
 
-        return view('editarProduto', compact('produto', 'categorias'));
+        $auth= auth()->user()->auth;
+        if($auth){
+            return view('editarProduto', compact('produto', 'categorias'));
+        }else{
+            return view('home');
+        }
     }
 
     public function put(Request $request, $id_produto)
@@ -120,7 +143,13 @@ class ProdutoController extends Controller
     {
         $produto = Produto::find($id_produto);
 
-        return view('deletarProduto', compact('produto'));
+        $auth= auth()->user()->auth;
+        if($auth){
+            return view('deletarProduto', compact('produto'));
+        }else{
+            return view('home');
+        }
+        
     }
 
     public function remove($id_produto)

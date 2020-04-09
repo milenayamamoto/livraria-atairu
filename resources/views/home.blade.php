@@ -51,21 +51,16 @@
 
 	<!-- Formulário de newsletter -->
 	<section class="home-newsletter">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="single">
-						<p>Cadastre seu e-mail e ganhe um cupom para sua primeira compra:</p>
-						<div class="input-group">
-							<input type="email" class="form-control" placeholder="Digite seu e-mail">
-							<span class="input-group-btn">
-								<button class="btn btn-theme" type="submit">Enviar</button>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="newsletter-info">
+			<h1>Newsletter</h1>
+			<p>Assine e fique por dentro das novidades</p>
 		</div>
+		<form class="newsletter-form">
+			<input type="text" placeholder="Digite seu e-mail">
+			<button type="submit">Assinar</button>
+		</form>
+		
+		
 	</section>
 
 </main>

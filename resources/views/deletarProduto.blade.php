@@ -43,7 +43,7 @@
             </form>
             <div class="col-md-4">
                 @if(isset($produto->imagem))
-                    <img src="{{ $produto->imagem }}" class="img-thumbnail" alt="capa de {{ $produto->nome }}">
+                    <img src="../../{{ $produto->imagem }}" class="img-thumbnail" alt="capa de {{ $produto->nome }}">
                 @endif
             </div>
         </div>

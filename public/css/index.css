@@ -56,78 +56,66 @@
 /* Newsletter */
 
 .home-newsletter {
-    background-color: #507642;
-    margin: 20vh 0;
+    background: #36384c;
+    padding: 60px calc((100% - 960px) / 2 );
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.home-newsletter .single {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    text-align: -webkit-center;
+.newsletter-info {
+    flex: 1 1 1 240px;
+    margin: 0 10px;   
 }
 
-.home-newsletter .single p {
-    font-size: x-large;
+.newsletter-info h1 {
+    font-size: 3em;
+    color: #849974;  
+}
+
+.newsletter-info p {
+    font-size: 1.25em;
+    font-family: "Courier";
+    max-width: 300px;
+    color: #849974; 
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    flex: 2 1 260px;
+    margin: 0 20px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.newsletter-form input {
+    flex: 3 1 200px;
+    font-size: 1.25em;
+    font-family: "Courier";
+    color: #849974; 
+    border: 4px solid #849974;
+    background: transparent;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.newsletter-form button {
+    flex: 1 1 200px;
+    font-size: 2.25em;
+    font-family: "Courier";
     font-weight: bold;
     text-transform: uppercase;
-    color: #fff;
-    font-family: "Courier";
-    margin-top: 20px;
+    color: #36384c; 
+    margin: 0px;
+    cursor: pointer;
+    border: 0px;    
+    padding: 15px 10px;
+    background: #849974;
 }
 
-.home-newsletter .single .form-control {
-    font-family: "Courier";
-    height: 50px;
-    border-color: transparent;
-    border-radius: 20px 0 0 20px;
-    margin-bottom: 50px;
-}
 
-.home-newsletter .single .form-control:focus {
-    box-shadow: none;
-    border-color: #243c4f;
-}
 
-.home-newsletter .single .btn {
-    min-height: 50px;
-    border-radius: 0 20px 20px 0;
-    background: #dcedc8;
-    color: #507642;
-    font-family: "Courier";
-    font-weight: bold;
-<<<<<<< HEAD
-    margin-bottom: 50px
-=======
-    margin-bottom: 50px;
->>>>>>> 5e3f13ce67b0f03970b5170e9278aa208823c5f0
-}
-
-.newsletter .input-group {
-    width: 30%;
-    font-family: "Courier";
-    min-width: max-content;
-}
-
-.newsletter .form-control {
-    margin-bottom: 0;
-    width: 80%;
-}
-
-@media (max-width: 768px) {
-    .newsletter {
-        font-size: 20px;
-        justify-content: space-around;
-    }
-
-    .newsletter button {
-        font-size: 14px;
-        padding: 5px 10px;
-        margin-left: 5px;
-    }
-}
 
 /* CAROUSEL */
 h1 {
